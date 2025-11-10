@@ -1,9 +1,34 @@
 @mixin botonBanner{
     background-color: $celeste-default;
-    color: $color-fondo;
+    color: $color-principal;
     font-family: $parrafos;
     font-size: $fuente-boton;
     border-radius: 60px;
     padding: 8px 36px; //arreglar
     border: 12px solid $color-fondo;
+}
+@mixin botonQuienesSomos{
+    background-color: $azul-activo;
+    color: $color-fondo;
+    font-family: $parrafos;
+    font-size: $fuente-boton;
+    border-radius: 22px;
+    padding: 8px 36px; //arreglar
+    border: none;
+}
+@mixin botonTarjeta{
+    color: $color-principal;
+    font-family: $parrafos;
+    font-size: $fuente-boton;
+    border-radius: 22px;
+    padding: 8px 36px; //arreglar
+    border: 3px solid $azul-activo;
+}
+@mixin botonGeneral{
+    color: $color-principal;
+    font-family: $parrafos;
+    font-size: $fuente-boton;
+    border-radius: 22px;
+    padding: 8px 36px; //arreglar
+    border: 3px solid $color-principal;
 }
