@@ -1,0 +1,9 @@
+@mixin botonBanner{
+    background-color: $celeste-default;
+    color: $color-fondo;
+    font-family: $parrafos;
+    font-size: $fuente-boton;
+    border-radius: 60px;
+    padding: 8px 36px; //arreglar
+    border: 12px solid $color-fondo;
+}
