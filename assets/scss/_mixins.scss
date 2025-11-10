@@ -4,7 +4,7 @@
     font-family: $parrafos;
     font-size: $fuente-boton;
     border-radius: 60px;
-    padding: 8px 36px; //arreglar
+    padding: 2.438rem 2.625rem; //39px 42px
     border: 12px solid $color-fondo;
 }
 @mixin botonQuienesSomos{
@@ -13,7 +13,7 @@
     font-family: $parrafos;
     font-size: $fuente-boton;
     border-radius: 22px;
-    padding: 8px 36px; //arreglar
+    padding: 2.563rem 5rem; //41px 80px
     border: none;
 }
 @mixin botonTarjeta{
@@ -21,7 +21,7 @@
     font-family: $parrafos;
     font-size: $fuente-boton;
     border-radius: 22px;
-    padding: 8px 36px; //arreglar
+    padding: 1.438rem 3.5rem; //23px 56px
     border: 3px solid $azul-activo;
 }
 @mixin botonGeneral{
@@ -29,6 +29,6 @@
     font-family: $parrafos;
     font-size: $fuente-boton;
     border-radius: 22px;
-    padding: 8px 36px; //arreglar
+    padding: 1.438rem 3.5rem; //23px 56px
     border: 3px solid $color-principal;
 }
