@@ -12011,7 +12011,7 @@ body h4, body .h4 {
   color: #26364D;
 }
 body p {
-  font-family: "Roboto Serif", serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
   color: #26364D;
@@ -12019,4 +12019,45 @@ body p {
 
 body {
   background-color: #ffffff;
+}
+
+.esp1 {
+  margin-top: 150px;
+}
+
+img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+
+.btn1 {
+  background-color: #E8F3FF;
+  color: #26364D;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 60px;
+  padding: 0.875rem 2.625rem;
+  border: 12px solid #ffffff;
+}
+
+.btn1:hover {
+  background-color: #0470B4;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 60px;
+  padding: 0.875rem 2.625rem;
+  border: 0.75rem solid #ffffff;
+}
+
+.bajada-titulo-banner {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #26364D;
 }/*# sourceMappingURL=mi-estilo.css.map */

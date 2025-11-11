@@ -4,7 +4,7 @@ $parrafos:"Montserrat", sans-serif;
 
 
 //  fuentes botones
-$fuente-boton: 1.5rem;  
+$fuente-boton: 1rem;  
 $weight-default: 600; 
 $weight-hover: 700; 
 
@@ -12,7 +12,7 @@ $weight-hover: 700;
 
 // Colores principales
 $color-principal: #26364D;      
-$azul-activo:#0471B4;             
+$azul-activo:#0470B4;             
 $color-fondo:#ffffff;                
 $celeste-default: #E8F3FF;          
 $color-footer: rgba(22, 31, 44, 0.9);           
@@ -21,8 +21,8 @@ $color-footer: rgba(22, 31, 44, 0.9);
 $espaciado-Titulo-Contenido: 80px;
 $espaciado-mismoContenido: 100px ;  //contenido dentro de la misma sección
 $espaciado-entre-secciones: 150px;
-$espaciado-para-footer: 200px;
-
+$espaciado-footer: 200px;
+$espaciado-header: 150px;
 
 /* // Bordes y sombras
 $radio-borde: ;
@@ -60,10 +60,12 @@ body{
         color:$color-principal;
     }
     p{
-        font-family: $titulos;
+        font-family: $parrafos;
         font-size: 1.25rem;
         font-weight: 400;
         color:$color-principal;
     }
 
 }
+
+
