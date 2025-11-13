@@ -1,0 +1,47 @@
+@mixin boton-banner{
+    background-color: $celeste-default;
+    color: $color-principal;
+    font-family: $parrafos;
+    font-size: $fuente-boton;
+    font-weight: $weight-default;
+    text-decoration: none;
+    border-radius: 60px;
+    padding: 0.875rem 2.625rem; //12px 32px
+    border: 12px solid $color-fondo;
+}
+@mixin hover-boton-banner{
+    background-color: $azul-activo;
+    color: $color-fondo;
+    font-family: $parrafos;
+    font-size: $fuente-boton;
+    font-weight: $weight-default;
+    text-decoration: none;
+    border-radius: 60px;
+    padding: 0.875rem 2.625rem; //14px 42px
+    border: 0.75rem solid $color-fondo;
+}
+@mixin boton-quienes-somos{
+    background-color: $azul-activo;
+    color: $color-fondo;
+    font-family: $parrafos;
+    font-size: $fuente-boton;
+    border-radius: 22px;
+    padding: 2.563rem 5rem; //41px 80px
+    border: none;
+}
+@mixin boton-tarjeta{
+    color: $color-principal;
+    font-family: $parrafos;
+    font-size: $fuente-boton;
+    border-radius: 22px;
+    padding: 1.438rem 3.5rem; //23px 56px
+    border: 3px solid $azul-activo;
+}
+@mixin botonGeneral{
+    color: $color-principal;
+    font-family: $parrafos;
+    font-size: $fuente-boton;
+    border-radius: 22px;
+    padding: 1.438rem 3.5rem; //23px 56px
+    border: 3px solid $color-principal;
+}

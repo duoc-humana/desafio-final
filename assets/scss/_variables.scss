@@ -1,30 +1,71 @@
-// Tamaños de títulos
-$tamaño-h1: ;   
-$tamaño-h2: ;
-$tamaño-h3: ;
-$tamaño-h4: ;
-$tamaño-h5: ;
-$tamaño-p: ;    
+//Fuentes
+$titulos:"Roboto Serif", serif;
+$parrafos:"Montserrat", sans-serif;
+
+
+//  fuentes botones
+$fuente-boton: 1rem;  
+$weight-default: 600; 
+$weight-hover: 700; 
+
+
 
 // Colores principales
-$color-principal: ;      
-$color-secundario: ;      
-$color-acento: ;         
-$color-fondo: ;          
-$color-oscuro: ;         
-$color-claro: ;          
-$color-gris: ;           
+$color-principal: #26364D;      
+$azul-activo:#0470B4;             
+$color-fondo:#ffffff;                
+$celeste-default: #E8F3FF;          
+$color-footer: rgba(22, 31, 44, 0.9);           
 
 // Espaciado (márgenes y rellenos)
-$espaciado-xs: ;
-$espaciado-s: ;
-$espaciado-m: ;
-$espaciado-l: ;
-$espaciado-xl: ;
+$espaciado-Titulo-Contenido: 80px;
+$espaciado-mismoContenido: 100px ;  //contenido dentro de la misma sección
+$espaciado-entre-secciones: 150px;
+$espaciado-footer: 200px;
+$espaciado-header: 150px;
 
-// Bordes y sombras
+/* // Bordes y sombras
 $radio-borde: ;
 $sombra-suave: ;
-$sombra-fuerte: ;
+$sombra-fuerte: ; 
+
+ */
+
+ 
+//ya se ven en el body, no es necesario declarar en scss
+body{
+    h1{
+        font-family: $titulos;
+        font-size: 3rem;
+        font-weight: 900;
+        color:$color-principal;
+    }
+    h2{
+        font-family: $titulos;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color:$color-principal;
+        
+    }
+    h3{
+        font-family: $titulos;
+        font-size: 2rem;
+        font-weight: 600;
+        color:$color-principal;
+    }
+    h4{
+        font-family: $titulos;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color:$color-principal;
+    }
+    p{
+        font-family: $parrafos;
+        font-size: 1.25rem;
+        font-weight: 400;
+        color:$color-principal;
+    }
+
+}
 
 

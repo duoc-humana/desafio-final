@@ -1,3 +1,29 @@
 body{
-    background-color: aqua;
-}//conexion ready
+    background-color: $color-fondo;
+}
+
+//conexion ready
+
+//Espaciado entre header y secciones
+.esp1{
+    margin-top: $espaciado-header;
+}
+//Ajuste de imágenes al contenedor
+img{
+    object-fit: contain;
+    width: 100%;
+}
+//Botón celeste claro
+.btn1{
+    @include boton-banner
+}
+.btn1:hover{
+    @include hover-boton-banner
+}
+
+.bajada-titulo-banner{
+        font-family: $parrafos;
+        font-size: 1.5rem;
+        font-weight: 400;
+        color:$color-principal;   
+}
