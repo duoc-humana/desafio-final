@@ -2,8 +2,6 @@ body{
     background-color: $color-fondo;
 }
 
-//conexion ready
-
 //Espaciado entre header y secciones
 .esp1{
     margin-top: $espaciado-header;
@@ -23,7 +21,7 @@ img{
 
 .bajada-titulo-banner{
         font-family: $parrafos;
-        font-size: 1.5rem;
+        font-size: 1.5rem;  //22px
         font-weight: 400;
         color:$color-principal;   
 }

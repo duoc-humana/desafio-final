@@ -11988,32 +11988,32 @@ $sombra-fuerte: ;
  */
 body h1, body .h1 {
   font-family: "Roboto Serif", serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 900;
   color: #26364D;
 }
 body h2, body .h2 {
   font-family: "Roboto Serif", serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #26364D;
 }
 body h3, body .h3 {
   font-family: "Roboto Serif", serif;
-  font-size: 2rem;
+  font-size: 1.625rem;
   font-weight: 600;
   color: #26364D;
 }
 body h4, body .h4 {
   font-family: "Roboto Serif", serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: #26364D;
 }
 body p {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.25rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 500;
   color: #26364D;
 }
 
@@ -12022,7 +12022,7 @@ body {
 }
 
 .esp1 {
-  margin-top: 150px;
+  margin-top: 100px;
 }
 
 img {
@@ -12035,7 +12035,7 @@ img {
   background-color: #E8F3FF;
   color: #26364D;
   font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 600;
   text-decoration: none;
   border-radius: 60px;
@@ -12046,12 +12046,6 @@ img {
 .btn1:hover {
   background-color: #0470B4;
   color: #ffffff;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 60px;
-  padding: 0.875rem 2.625rem;
   border: 0.75rem solid #ffffff;
 }
 

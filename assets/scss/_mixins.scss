@@ -3,7 +3,7 @@
     color: $color-principal;
     font-family: $parrafos;
     font-size: $fuente-boton;
-    font-weight: $weight-default;
+    font-weight: $weight-boton;
     text-decoration: none;
     border-radius: 60px;
     padding: 0.875rem 2.625rem; //12px 32px
@@ -12,12 +12,6 @@
 @mixin hover-boton-banner{
     background-color: $azul-activo;
     color: $color-fondo;
-    font-family: $parrafos;
-    font-size: $fuente-boton;
-    font-weight: $weight-default;
-    text-decoration: none;
-    border-radius: 60px;
-    padding: 0.875rem 2.625rem; //14px 42px
     border: 0.75rem solid $color-fondo;
 }
 @mixin boton-quienes-somos{
@@ -29,19 +23,11 @@
     padding: 2.563rem 5rem; //41px 80px
     border: none;
 }
-@mixin boton-tarjeta{
-    color: $color-principal;
+@mixin botonGeneral{
+    color: $azul-activo;
     font-family: $parrafos;
     font-size: $fuente-boton;
     border-radius: 22px;
     padding: 1.438rem 3.5rem; //23px 56px
     border: 3px solid $azul-activo;
-}
-@mixin botonGeneral{
-    color: $color-principal;
-    font-family: $parrafos;
-    font-size: $fuente-boton;
-    border-radius: 22px;
-    padding: 1.438rem 3.5rem; //23px 56px
-    border: 3px solid $color-principal;
 }
