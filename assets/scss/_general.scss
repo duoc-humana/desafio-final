@@ -1,27 +1,30 @@
-body{
+body {
     background-color: $color-fondo;
 }
 
 //Espaciado entre header y secciones
-.esp1{
+.esp1 {
     margin-top: $espaciado-header;
 }
+
 //Ajuste de imágenes al contenedor
-img{
+img {
     object-fit: contain;
     width: 100%;
 }
+
 //Botón celeste claro
-.btn1{
+.btn1 {
     @include boton-banner
 }
-.btn1:hover{
+
+.btn1:hover {
     @include hover-boton-banner
 }
 
-.bajada-titulo-banner{
-        font-family: $parrafos;
-        font-size: 1.5rem;  //22px
-        font-weight: 400;
-        color:$color-principal;   
+.bajada-titulo-banner {
+    font-family: $parrafos;
+    font-size: 1.5rem; //22px
+    font-weight: 400;
+    color: $color-principal;
 }
