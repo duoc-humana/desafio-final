@@ -252,7 +252,17 @@ body {
 
 //espaciado entre seccion de abajo y la de arriba
 .esp3{
-    margin-top: 150px;
+    margin-top: $espaciado-entre-secciones;
+}
+
+//espaciado entre título y contenido
+.esp4{
+    margin-bottom: $espaciado-titulo-contenido;
+}
+
+//espaciado entre contenidos
+.esp5{
+    margin-bottom: $espaciado-mismoContenido;
 }
 
 /* +++++ COLOR DE TEXTO +++++ */
@@ -287,7 +297,9 @@ img {
     width: 100%;
 }
 
-//Botón celeste claro
+//BOTONES +++++++
+
+//boton celeste claro
 .btn1 {
     @include boton-banner
 }
@@ -296,13 +308,83 @@ img {
     @include hover-boton-banner
 }
 
-//Bajada de título 
+//botón general
+
+.btn2{
+    @include boton-general
+}
+
+.btn2:hover{
+    @include boton-general-hover
+}
+
+//boton grande home maceteros
+.btn3{
+    @include boton-grande-1
+}
+
+.btn3:hover{
+    @include boton-grande-hover
+}
+
+//Boton grande home confección
+.btn4{
+ @include boton-grande-2
+}
+
+.btn4:hover{
+    @include boton-grande-hover
+}
+
+//Boton grande home revestimiento
+.btn5{
+    @include boton-grande-3
+}
+
+.btn5:hover{
+    @include boton-grande-hover
+}
+
+//boton grande home revestimiento
+
+//LINKS +++++++++++ 
+
+.link{
+    color: $color-principal;
+}
+.link:hover{
+    color: $azul-activo;
+}
+
+//TEXTOS "ESPECIALES" 
 .bajada-titulo-banner {
     font-family: $parrafos;
     font-size: 1.5rem; //22px
     font-weight: 400;
     color: $color-principal;
     margin-top: 50px;
+}
+//Texto producto destacado
+.txt-esp1{
+    color: $azul-activo;
+    font-family: $parrafos;
+    line-height: 2.375rem;
+    font-size: 1.875rem;
+    font-weight: 500;
+}
+.txt-esp2{
+  color: $color-principal;
+    font-family: $parrafos;
+    line-height: 2.375rem;
+    font-size: 1.875rem;
+    font-weight: 500;  
+}
+.txt-esp3{
+    color: $color-principal;
+    font-family: $parrafos;
+    line-height: 2.5rem;
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 /* +++++ SECCIÓN DE VISIÓN +++++ */
@@ -320,8 +402,19 @@ img {
     height: 305px;
 }
 
-//Proceso 
+//Proceso de confección con iconos.
 
 .altura{
     height: 100px;
 }
+
+//Producto destacado
+
+.img-fondo{
+    height: 560px;
+    background-image: url(../img/fondo-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ 

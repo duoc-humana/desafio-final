@@ -11991,35 +11991,35 @@ body h1, body .h1 {
   font-size: 2.5rem;
   font-weight: 900;
   color: #26364D;
-  line-height: 48px;
+  line-height: 3rem;
 }
 body h2, body .h2 {
   font-family: "Roboto Serif", serif;
   font-size: 2rem;
   font-weight: 700;
   color: #26364D;
-  line-height: 40px;
+  line-height: 2.5rem;
 }
 body h3, body .h3 {
   font-family: "Roboto Serif", serif;
   font-size: 1.625rem;
   font-weight: 600;
   color: #26364D;
-  line-height: 32px;
+  line-height: 2rem;
 }
 body h4, body .h4 {
   font-family: "Roboto Serif", serif;
   font-size: 1.25rem;
   font-weight: 500;
   color: #26364D;
-  line-height: 28px;
+  line-height: 1.75rem;
 }
 body p {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   color: #26364D;
-  line-height: 24px;
+  line-height: 1.5rem;
 }
 
 body {
@@ -12262,6 +12262,14 @@ body {
   margin-top: 150px;
 }
 
+.esp4 {
+  margin-bottom: 60px;
+}
+
+.esp5 {
+  margin-bottom: 100px;
+}
+
 /* +++++ COLOR DE TEXTO +++++ */
 .color-blanco {
   color: #ffffff;
@@ -12314,12 +12322,151 @@ img {
   border: 0.75rem solid #ffffff;
 }
 
+.btn2 {
+  color: #0471B4;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem;
+  border-radius: 22px;
+  padding: 1.438rem 3.5rem;
+  border: 3px solid #0471B4;
+  text-decoration: none;
+}
+
+.btn2:hover {
+  color: #ffffff;
+  background-color: #0471B4;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem;
+  border-radius: 22px;
+  padding: 1.438rem 3.5rem;
+  text-decoration: none;
+}
+
+.btn3 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  max-width: 320px;
+  color: #ffffff;
+  background-image: url(../img/maceta-boton.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(27, 53, 63, 0.7);
+  background-blend-mode: multiply;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  border-radius: 22px;
+  line-height: 120px;
+  text-align: center;
+  text-decoration: none;
+  transform-origin: top left;
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
+
+.btn3:hover {
+  transform: scaleX(1.2) scaleY(1.17);
+  box-shadow: 0 8px 18px rgba(4, 113, 180, 0.5);
+}
+
+.btn4 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  max-width: 320px;
+  color: #ffffff;
+  background-image: url(../img/confeccion-boton.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(27, 53, 63, 0.7);
+  background-blend-mode: multiply;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  border-radius: 22px;
+  line-height: 120px;
+  text-align: center;
+  text-decoration: none;
+  transform-origin: top left;
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
+
+.btn4:hover {
+  transform: scaleX(1.2) scaleY(1.17);
+  box-shadow: 0 8px 18px rgba(4, 113, 180, 0.5);
+}
+
+.btn5 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  max-width: 320px;
+  color: #ffffff;
+  background-image: url(../img/revestimiento-boton.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(27, 53, 63, 0.7);
+  background-blend-mode: multiply;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  border-radius: 22px;
+  line-height: 120px;
+  text-align: center;
+  text-decoration: none;
+  transform-origin: top left;
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
+
+.btn5:hover {
+  transform: scaleX(1.2) scaleY(1.17);
+  box-shadow: 0 8px 18px rgba(4, 113, 180, 0.5);
+}
+
+.link {
+  color: #26364D;
+}
+
+.link:hover {
+  color: #0471B4;
+}
+
 .bajada-titulo-banner {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
   color: #26364D;
   margin-top: 50px;
+}
+
+.txt-esp1 {
+  color: #0471B4;
+  font-family: "Montserrat", sans-serif;
+  line-height: 2.375rem;
+  font-size: 1.875rem;
+  font-weight: 500;
+}
+
+.txt-esp2 {
+  color: #26364D;
+  font-family: "Montserrat", sans-serif;
+  line-height: 2.375rem;
+  font-size: 1.875rem;
+  font-weight: 500;
+}
+
+.txt-esp3 {
+  color: #26364D;
+  font-family: "Montserrat", sans-serif;
+  line-height: 2.5rem;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 /* +++++ SECCIÓN DE VISIÓN +++++ */
@@ -12336,4 +12483,11 @@ img {
 
 .altura {
   height: 100px;
+}
+
+.img-fondo {
+  height: 560px;
+  background-image: url(../img/fondo-1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }/*# sourceMappingURL=mi-estilo.css.map */
