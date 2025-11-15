@@ -11991,30 +11991,35 @@ body h1, body .h1 {
   font-size: 2.5rem;
   font-weight: 900;
   color: #26364D;
+  line-height: 48px;
 }
 body h2, body .h2 {
   font-family: "Roboto Serif", serif;
   font-size: 2rem;
   font-weight: 700;
   color: #26364D;
+  line-height: 40px;
 }
 body h3, body .h3 {
   font-family: "Roboto Serif", serif;
   font-size: 1.625rem;
   font-weight: 600;
   color: #26364D;
+  line-height: 32px;
 }
 body h4, body .h4 {
   font-family: "Roboto Serif", serif;
   font-size: 1.25rem;
   font-weight: 500;
   color: #26364D;
+  line-height: 28px;
 }
 body p {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   color: #26364D;
+  line-height: 24px;
 }
 
 body {
@@ -12243,8 +12248,46 @@ body {
     justify-content: center;
   }
 }
+/* ---- HOME ----- */
+/* +++++ ESPACIADOS +++++ */
 .esp1 {
   margin-top: 100px;
+}
+
+.esp2 {
+  margin-top: 200px;
+}
+
+.esp3 {
+  margin-top: 150px;
+}
+
+/* +++++ COLOR DE TEXTO +++++ */
+.color-blanco {
+  color: #ffffff;
+}
+
+.color-celeste {
+  color: #0471B4;
+}
+
+/* +++++ BANNER PRINCIPAL +++++ */
+.pos1 {
+  position: relative;
+}
+
+.pos2 {
+  position: absolute;
+  z-index: 10;
+  left: -30px;
+  bottom: 0px;
+}
+
+.pos3 {
+  position: absolute;
+  z-index: 10;
+  top: -30px;
+  right: -30px;
 }
 
 img {
@@ -12266,7 +12309,7 @@ img {
 }
 
 .btn1:hover {
-  background-color: #0470B4;
+  background-color: #0471B4;
   color: #ffffff;
   border: 0.75rem solid #ffffff;
 }
@@ -12276,4 +12319,21 @@ img {
   font-size: 1.5rem;
   font-weight: 400;
   color: #26364D;
+  margin-top: 50px;
+}
+
+/* +++++ SECCIÓN DE VISIÓN +++++ */
+.borde-vision {
+  height: 135px;
+  border-radius: 0 162px 0 0;
+  background-color: #26364D;
+}
+
+.color-fondo {
+  background-color: #26364D;
+  height: 305px;
+}
+
+.altura {
+  height: 100px;
 }/*# sourceMappingURL=mi-estilo.css.map */

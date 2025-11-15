@@ -237,12 +237,50 @@ body {
 }
 
 
+/* ---- HOME ----- */
+
+/* +++++ ESPACIADOS +++++ */ 
 
 //Espaciado entre header y secciones
 .esp1 {
     margin-top: $espaciado-header;
 }
+//Espaciado entre secciones y footer
+.esp2{
+    margin-top: $espaciado-footer;
+}
 
+//espaciado entre seccion de abajo y la de arriba
+.esp3{
+    margin-top: 150px;
+}
+
+/* +++++ COLOR DE TEXTO +++++ */
+.color-blanco{
+    color: $color-fondo;
+}
+.color-celeste{
+    color: $azul-activo;
+}
+
+/* +++++ BANNER PRINCIPAL +++++ */
+
+//Posiciones de botones cotizar y quiénes somos
+.pos1{
+    position: relative;
+}
+.pos2{
+    position: absolute;
+    z-index: 10;
+    left: -30px;
+    bottom: 0px;
+}
+.pos3{
+    position: absolute;
+    z-index: 10;
+    top: -30px;
+    right: -30px;
+}
 //Ajuste de imágenes al contenedor
 img {
     object-fit: contain;
@@ -258,9 +296,32 @@ img {
     @include hover-boton-banner
 }
 
+//Bajada de título 
 .bajada-titulo-banner {
     font-family: $parrafos;
     font-size: 1.5rem; //22px
     font-weight: 400;
     color: $color-principal;
+    margin-top: 50px;
+}
+
+/* +++++ SECCIÓN DE VISIÓN +++++ */
+
+//Figura de título visión
+.borde-vision{
+    height: 135px;
+    border-radius: 0 162px 0 0;
+    background-color: $color-principal;
+}
+
+//color de fondo y altura de visiones (01, 02, 03)
+.color-fondo{
+    background-color: $color-principal;
+    height: 305px;
+}
+
+//Proceso 
+
+.altura{
+    height: 100px;
 }
