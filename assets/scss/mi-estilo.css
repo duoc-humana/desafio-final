@@ -12504,6 +12504,10 @@ img {
 /* ---- Fin HOME ----- */
 /* ---- Categorias ----- */
 /* Producto estilo personalizado */
+.ttprod {
+  font-family: "Roboto Serif", serif;
+}
+
 .product-item {
   padding: 10px;
   border-radius: 8px;
