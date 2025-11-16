@@ -12117,6 +12117,15 @@ body {
   color: white;
 }
 
+.activado {
+  background-color: #26364D;
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+}
+.activado .span1 {
+  color: white;
+}
+
 /* ------- MENÚ HAMBURGUESA (solo móvil) ------- */
 .hamburger {
   display: none;
