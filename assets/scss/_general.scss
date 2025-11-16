@@ -239,58 +239,63 @@ body {
 
 /* ---- HOME ----- */
 
-/* +++++ ESPACIADOS +++++ */ 
+/* +++++ ESPACIADOS +++++ */
 
 //Espaciado entre header y secciones
 .esp1 {
     margin-top: $espaciado-header;
 }
+
 //Espaciado entre secciones y footer
-.esp2{
+.esp2 {
     margin-top: $espaciado-footer;
 }
 
 //espaciado entre seccion de abajo y la de arriba
-.esp3{
+.esp3 {
     margin-top: $espaciado-entre-secciones;
 }
 
 //espaciado entre título y contenido
-.esp4{
+.esp4 {
     margin-bottom: $espaciado-titulo-contenido;
 }
 
 //espaciado entre contenidos
-.esp5{
+.esp5 {
     margin-bottom: $espaciado-mismoContenido;
 }
 
 /* +++++ COLOR DE TEXTO +++++ */
-.color-blanco{
+.color-blanco {
     color: $color-fondo;
 }
-.color-celeste{
+
+.color-celeste {
     color: $azul-activo;
 }
 
 /* +++++ BANNER PRINCIPAL +++++ */
 
 //Posiciones de botones cotizar y quiénes somos
-.pos1{
+.pos1 {
     position: relative;
 }
-.pos2{
+
+.pos2 {
     position: absolute;
     z-index: 10;
     left: -30px;
     bottom: 0px;
 }
-.pos3{
+
+.pos3 {
     position: absolute;
     z-index: 10;
     top: -30px;
     right: -30px;
 }
+
 //Ajuste de imágenes al contenedor
 img {
     object-fit: contain;
@@ -310,38 +315,38 @@ img {
 
 //botón general
 
-.btn2{
+.btn2 {
     @include boton-general
 }
 
-.btn2:hover{
+.btn2:hover {
     @include boton-general-hover
 }
 
 //boton grande home maceteros
-.btn3{
+.btn3 {
     @include boton-grande-1
 }
 
-.btn3:hover{
+.btn3:hover {
     @include boton-grande-hover
 }
 
 //Boton grande home confección
-.btn4{
- @include boton-grande-2
+.btn4 {
+    @include boton-grande-2
 }
 
-.btn4:hover{
+.btn4:hover {
     @include boton-grande-hover
 }
 
 //Boton grande home revestimiento
-.btn5{
+.btn5 {
     @include boton-grande-3
 }
 
-.btn5:hover{
+.btn5:hover {
     @include boton-grande-hover
 }
 
@@ -349,10 +354,11 @@ img {
 
 //LINKS +++++++++++ 
 
-.link{
+.link {
     color: $color-principal;
 }
-.link:hover{
+
+.link:hover {
     color: $azul-activo;
 }
 
@@ -364,22 +370,25 @@ img {
     color: $color-principal;
     margin-top: 50px;
 }
+
 //Texto producto destacado
-.txt-esp1{
+.txt-esp1 {
     color: $azul-activo;
     font-family: $parrafos;
     line-height: 2.375rem;
     font-size: 1.875rem;
     font-weight: 500;
 }
-.txt-esp2{
-  color: $color-principal;
+
+.txt-esp2 {
+    color: $color-principal;
     font-family: $parrafos;
     line-height: 2.375rem;
     font-size: 1.875rem;
-    font-weight: 500;  
+    font-weight: 500;
 }
-.txt-esp3{
+
+.txt-esp3 {
     color: $color-principal;
     font-family: $parrafos;
     line-height: 2.5rem;
@@ -390,31 +399,146 @@ img {
 /* +++++ SECCIÓN DE VISIÓN +++++ */
 
 //Figura de título visión
-.borde-vision{
+.borde-vision {
     height: 135px;
     border-radius: 0 162px 0 0;
     background-color: $color-principal;
 }
 
 //color de fondo y altura de visiones (01, 02, 03)
-.color-fondo{
+.color-fondo {
     background-color: $color-principal;
     height: 305px;
 }
 
 //Proceso de confección con iconos.
 
-.altura{
+.altura {
     height: 100px;
 }
 
 //Producto destacado
 
-.img-fondo{
+.img-fondo {
     height: 560px;
     background-image: url(../img/fondo-1.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
- 
+
+/* ---- Fin HOME ----- */
+
+/* ---- Categorias ----- */
+
+
+/* Producto estilo personalizado */
+.product-item {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Imagen */
+.product-img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* Texto */
+.product-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.product-size {
+    font-size: 16px;
+    color: gray;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Línea celeste */
+.product-line {
+    height: 3px;
+    background-color: #1a73e8;
+    margin-top: 10px;
+}
+
+/* Botón SIEMPRE visible y ahora RESPONSIVE */
+.add-cart-hover {
+    position: relative;
+    display: flex;
+    /* Centrado perfecto */
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    /* ✔ Se adapta al contenedor */
+    height: 40px;
+
+    background-color: white;
+    /* Fondo blanco por defecto */
+    color: white;
+    /* Texto blanco (lo que pediste) */
+
+    padding: 6px 12px;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+
+    font-size: 14px;
+    border: none;
+
+    transition: 0.3s ease;
+}
+
+/* Hover del botón: se vuelve celeste */
+.add-cart-hover:hover {
+    background-color: #1a73e8;
+    color: white;
+}
+
+/* Aside sticky */
+.filter-sticky {
+    position: sticky;
+    top: 20px;
+}
+
+
+
+/* Estilos mobile (<= 768px) */
+@media (max-width: 768px) {
+
+    /* Parte inferior con fondo celeste */
+    .product-item .product-info {
+        background-color: #E8F3FF;
+        padding: 15px;
+        border-radius: 0 0 10px 10px;
+        /* redondeo inferior */
+    }
+
+    /* Botón azul en mobile */
+    .product-item .add-cart-hover {
+        background-color: #007bff !important;
+        color: white !important;
+        border: none;
+        width: 100%;
+    }
+
+    .product-item .add-cart-hover:hover {
+        background-color: #006ae0 !important;
+    }
+
+    /* Asegurar que la imagen no herede fondo */
+    .product-img {
+        background: transparent !important;
+        display: block;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        /* redondeo superior */
+    }
+}
