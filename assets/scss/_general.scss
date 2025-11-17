@@ -442,22 +442,20 @@ img {
 /* ---- Categorias ----- */
 
 
-/* Producto estilo personalizado */
-.ttprod{
+.ttprod {
     font-family: $titulos;
 }
+
 .product-item {
-    padding: 10px;
     border-radius: 8px;
 }
 
-/* Imagen */
+
 .product-img {
     width: 100%;
     border-radius: 6px;
 }
 
-/* Texto */
 .product-name {
     font-size: 20px;
     font-weight: 600;
@@ -475,7 +473,7 @@ img {
     margin-top: 10px;
 }
 
-/* Línea celeste */
+
 .product-line {
     height: 3px;
     background-color: #1a73e8;
@@ -525,6 +523,10 @@ img {
 
 /* Estilos mobile (<= 768px) */
 @media (max-width: 768px) {
+    .product-item {
+        box-shadow: 4px 5px 5px rgb(190, 190, 190);
+        border-radius: 22px 22px 22px 22px;
+    }
 
     /* Parte inferior con fondo celeste */
     .product-item .product-info {
@@ -553,5 +555,13 @@ img {
         width: 100%;
         border-radius: 10px 10px 0 0;
         /* redondeo superior */
+    }
+
+    .add-cart-hover {
+        border-radius: 11px;
+    }
+
+    .product-line {
+        display: none;
     }
 }
