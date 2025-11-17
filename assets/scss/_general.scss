@@ -423,6 +423,7 @@ img {
 
 .link {
     color: $color-principal;
+    text-decoration: underline;
 }
 
 .link:hover {
@@ -489,6 +490,15 @@ img {
 .img-fondo {
     height: 560px;
     background-image: url(../img/fondo-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+//Trabajo con empresas
+
+.bg{
+    background-image: url(../img/fondo-1.png);
+    height: 525px;
     background-repeat: no-repeat;
     background-size: cover;
 }
