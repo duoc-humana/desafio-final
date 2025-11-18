@@ -16,8 +16,11 @@ searchBtn.addEventListener('click', () => {
 });
 
 
-/* slide  */
 
-document.getElementById("filterToggle").addEventListener("click", function () {
-    document.getElementById("filterAside").classList.toggle("open");
+/* footer */
+document.querySelectorAll(".accordion-header").forEach(header => {
+    header.addEventListener("click", () => {
+        const parent = header.parentElement;
+        parent.classList.toggle("active");
+    });
 });
