@@ -22,7 +22,9 @@ a {
 .header-left,
 .header-right {
     display: flex;
+    align-items: center;
     gap: 15px;
+    
 }
 
 .icon {
