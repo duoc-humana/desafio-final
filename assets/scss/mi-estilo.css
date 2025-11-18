@@ -12055,6 +12055,10 @@ a {
   cursor: pointer;
 }
 
+.punto {
+  cursor: pointer;
+}
+
 /* ------- BUSCADOR ------- */
 .search-container {
   position: relative;
