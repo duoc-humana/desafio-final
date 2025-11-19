@@ -12548,7 +12548,11 @@ img {
 }
 
 .altura {
-  height: 100px;
+  height: 150px;
+}
+
+.ancho {
+  width: 150px;
 }
 
 .img-fondo {
@@ -12565,6 +12569,29 @@ img {
   background-size: cover;
 }
 
+.ocultar {
+  overflow-x: hidden;
+}
+
+.ancho2 {
+  width: 200px;
+}
+
+.banner-mov {
+  animation: mover 15s linear infinite;
+}
+
+@keyframes mover {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
 /* ---- Fin HOME ----- */
 /* ---- Categorias ----- */
 .ttprod {
