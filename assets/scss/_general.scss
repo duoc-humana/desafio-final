@@ -660,49 +660,7 @@ img {
 
 
 /* Estilos mobile (<= 768px) */
-@media (max-width: 768px) {
-    .product-item {
-        box-shadow: 4px 5px 5px rgb(190, 190, 190);
-        border-radius: 22px 22px 22px 22px;
-    }
 
-    /* Parte inferior con fondo celeste */
-    .product-item .product-info {
-        background-color: #E8F3FF;
-        padding: 15px;
-        border-radius: 0 0 10px 10px;
-        /* redondeo inferior */
-    }
-
-    /* Botón azul en mobile */
-    .product-item .add-cart-hover {
-        background-color: #007bff !important;
-        color: white !important;
-        border: none;
-        width: 100%;
-    }
-
-    .product-item .add-cart-hover:hover {
-        background-color: #006ae0 !important;
-    }
-
-    /* Asegurar que la imagen no herede fondo */
-    .product-img {
-        background: transparent !important;
-        display: block;
-        width: 100%;
-        border-radius: 10px 10px 0 0;
-        /* redondeo superior */
-    }
-
-    .add-cart-hover {
-        border-radius: 11px;
-    }
-
-    .product-line {
-        display: none;
-    }
-}
 
 
 
