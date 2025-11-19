@@ -12181,6 +12181,10 @@ a {
   padding: 40px 20px;
   font-family: Arial, sans-serif;
 }
+.footer .h4footer {
+  color: white !important;
+  margin-bottom: 20px;
+}
 
 /* Contenedor centrado */
 .footer-content {
@@ -12205,8 +12209,8 @@ a {
 
 .footer-section li {
   margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 15px;
+  margin-bottom: 25px;
+  font-size: 16px;
 }
 
 /* Redes sociales */
@@ -12264,6 +12268,9 @@ a {
 }
 
 @media (max-width: 768px) {
+  .h4footer {
+    display: none;
+  }
   /* Ocultar las listas por defecto */
   .accordion-body {
     display: none;
