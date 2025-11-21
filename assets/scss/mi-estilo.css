@@ -12439,7 +12439,7 @@ img {
 }
 
 .btn3:hover {
-  transform: scaleX(1.2) scaleY(1.17);
+  transform: scaleX(1.1) scaleY(1.1);
   box-shadow: 0 8px 18px rgba(4, 113, 180, 0.5);
 }
 
@@ -12468,7 +12468,7 @@ img {
 }
 
 .btn4:hover {
-  transform: scaleX(1.2) scaleY(1.17);
+  transform: scaleX(1.1) scaleY(1.1);
   box-shadow: 0 8px 18px rgba(4, 113, 180, 0.5);
 }
 
@@ -12497,7 +12497,7 @@ img {
 }
 
 .btn5:hover {
-  transform: scaleX(1.2) scaleY(1.17);
+  transform: scaleX(1.1) scaleY(1.1);
   box-shadow: 0 8px 18px rgba(4, 113, 180, 0.5);
 }
 
