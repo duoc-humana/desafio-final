@@ -12501,6 +12501,16 @@ img {
   box-shadow: 0 8px 18px rgba(4, 113, 180, 0.5);
 }
 
+.contebotonmovl {
+  width: 100%;
+}
+
+#categoriasCarousel .carousel-item a {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+}
+
 .link {
   color: #26364D;
   text-decoration: underline;
