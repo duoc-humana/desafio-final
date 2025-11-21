@@ -12503,10 +12503,14 @@ img {
 
 .contebotonmovl {
   width: 100%;
+  height: 400px;
 }
 
 #categoriasCarousel .carousel-item a {
-  display: inline-block;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
   padding: 0.6rem 1.2rem;
   font-size: 1rem;
 }
