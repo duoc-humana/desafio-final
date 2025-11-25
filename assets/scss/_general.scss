@@ -1442,3 +1442,80 @@ span {
     font-size: 28px;
     color: #222;
 }
+
+// PÁGINA DE CARRITO VACÍO //
+.empty-cart-container {
+    text-align: center;
+    padding: 60px 20px;
+    
+    @media (max-width: 768px) {
+        padding: 40px 15px;
+    }
+}
+
+.empty-cart-icon {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 40px;
+    background-color: $celeste-default;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    svg {
+        width: 100px;
+        height: 100px;
+        stroke: $azul-activo;
+    }
+    
+    @media (max-width: 768px) {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 30px;
+        
+        svg {
+            width: 75px;
+            height: 75px;
+        }
+    }
+}
+
+.empty-cart-title {
+    margin-bottom: 20px;
+    
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-bottom: 15px;
+    }
+}
+
+.empty-cart-text {
+    margin-bottom: 40px;
+    
+    @media (max-width: 768px) {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+    }
+}
+.btn-ir-tienda {
+    @include boton-general;
+    background-color: $color-fondo;
+    display: inline-block;
+    
+    &:hover {
+        @include boton-general-hover;
+    }
+    
+    @media (max-width: 768px) {
+        padding: 1rem 2.5rem;
+        font-size: 1rem;
+    }
+    
+    @media (max-width: 480px) {
+        padding: 0.875rem 2rem;
+        font-size: 0.95rem;
+        border-radius: 18px;
+    }
+}
