@@ -1392,16 +1392,53 @@ span {
 
 
 // seccion mapa 
-.ubicacion-icon {
-    font-size: 1.4rem;
-    color: #143B63;
+/* Contenedor de la columna izquierda */
+.ubicacion .col-lg-4 {
+    padding: 20px;
+    background: #f9fafb00;
+    border-radius: 12px;
 }
 
-.ubicacion-text {
-    font-size: 1rem;
+/* Cada fila de icono + texto */
+.ubicacion .col-lg-4 .d-flex {
+    background: white;
+    padding: 12px 16px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto hover atractivo */
+.ubicacion .col-lg-4 .d-flex:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* Iconos */
+.ubicacion i {
+    font-size: 22px;
+    color: #0471B4;
+    margin-right: 10px;
+}
+
+/* Título (Ubicación, Horario, Hora) */
+.ubicacion p {
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0 8px 0 0;
     color: #333;
 }
 
-.mapa-sombra {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+/* Texto a la derecha */
+.ubicacion-text {
+    font-size: 15px;
+    color: #666;
+    font-weight: 400;
+}
+
+/* Título principal */
+.titulo-seccion {
+    font-weight: 700;
+    font-size: 28px;
+    color: #222;
 }
