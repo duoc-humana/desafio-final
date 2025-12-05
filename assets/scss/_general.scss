@@ -1450,3 +1450,95 @@ span {
     font-size: 28px;
     color: #222;
 }
+
+
+
+/* ==============================
+   SECCIÓN FUNDADORA
+============================== */
+.titulo-quienes-somos {
+    margin-bottom: $espaciado-titulo-contenido;
+}
+.fundadora {
+    background-color: $color-fondo;
+    color: $color-principal;
+
+    /* Imagen de la fundadora */
+    img {
+      width: 258px;          // Tamaño más pequeño
+      height: auto;
+      border-radius: 22px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  
+      @media (max-width: 768px) {
+        width: 140px;        // Ajuste responsive
+        margin-bottom: 15px;
+      }
+    }
+  
+    /* Ajuste del layout */
+    .row {
+      align-items: center;
+  
+      @media (max-width: 992px) {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  }
+  
+
+  .tabs-box {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto 0;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.tab-content-box {
+    background-color: $azul-activo; // azul del contenedor
+    padding: 35px;
+    border-radius: 16px;
+    color: white;
+    font-family: $parrafos;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab-panel {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+/* RECTÁNGULOS PEQUEÑOS */
+.tabs-selectors {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+    gap: 12px;
+}
+
+.selector {
+    flex: 1;
+    height: 16px;
+    background-color: $color-principal;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &.active {
+        background-color: $azul-activo;
+    }
+
+    &:hover {
+        background-color: $azul-activo;
+    }
+}

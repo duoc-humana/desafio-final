@@ -13469,4 +13469,91 @@ span {
   font-weight: 700;
   font-size: 28px;
   color: #222;
+}
+
+/* ==============================
+   SECCIÓN FUNDADORA
+============================== */
+.titulo-quienes-somos {
+  margin-bottom: 60px;
+}
+
+.fundadora {
+  background-color: #ffffff;
+  color: #26364D;
+  /* Imagen de la fundadora */
+  /* Ajuste del layout */
+}
+.fundadora img {
+  width: 258px;
+  height: auto;
+  border-radius: 22px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 768px) {
+  .fundadora img {
+    width: 140px;
+    margin-bottom: 15px;
+  }
+}
+.fundadora .row {
+  align-items: center;
+}
+@media (max-width: 992px) {
+  .fundadora .row {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.tabs-box {
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto 0;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.tab-content-box {
+  background-color: #0471B4;
+  padding: 35px;
+  border-radius: 16px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-panel {
+  display: none;
+}
+.tab-panel.active {
+  display: block;
+}
+
+/* RECTÁNGULOS PEQUEÑOS */
+.tabs-selectors {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+  gap: 12px;
+}
+
+.selector {
+  flex: 1;
+  height: 16px;
+  background-color: #26364D;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.selector.active {
+  background-color: #0471B4;
+}
+.selector:hover {
+  background-color: #0471B4;
 }/*# sourceMappingURL=mi-estilo.css.map */
