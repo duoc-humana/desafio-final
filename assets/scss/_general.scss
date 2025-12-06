@@ -1542,3 +1542,213 @@ span {
         background-color: $azul-activo;
     }
 }
+
+//carrusel cartas de quienes somos 
+:root {
+  --accent: #ff824f;
+  --gap: 1rem;
+  --closed: 4rem;
+  --open: 22rem;
+  --speed: 0.3s;
+}
+
+.workflow-section {
+
+  .workflow-head {
+    max-width: 1400px;
+    margin: auto;
+    padding: 70px 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+
+    h2 {
+      font: 400 1.5rem/1.2 Inter, sans-serif;
+
+      @media (min-width: 1024px) {
+        font-size: 2.25rem;
+      }
+    }
+
+    .workflow-controls {
+      display: flex;
+      gap: 0.5rem;
+
+      .workflow-nav-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+        border: none;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.12);
+        color: #fff;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          background: var(--accent);
+        }
+
+        &:disabled {
+          opacity: 0.3;
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  .workflow-slider {
+    max-width: 1400px;
+    margin: auto;
+    overflow: hidden;
+
+    .workflow-track {
+      display: flex;
+      gap: var(--gap);
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 40px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .workflow-card {
+        position: relative;
+        flex: 0 0 var(--closed);
+        height: 26rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        cursor: pointer;
+        transition: flex-basis var(--speed), transform var(--speed);
+
+        &[active] {
+          flex-basis: var(--open);
+            transform: translateY(-6px);
+            box-shadow: 0 1px 11px #0471B4;
+            border-radius: 22px;
+
+            .workflow-card__bg {
+                position: static;
+                width: 100%;
+                height: auto;
+                filter: brightness(0.9) saturate(100%);
+                border-radius: 1rem 1rem 0 0;
+            }
+
+            .workflow-card__content {
+                position: relative;
+                background:$color-fondo;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem 1.2rem;
+                gap: 0.7rem;
+                border-radius: 0 0 1rem 1rem;
+            }
+
+            .workflow-card__title {
+                writing-mode: horizontal-tb;
+                transform: none;
+                font-size: 1.6rem;
+            }
+
+            .workflow-card__desc {
+                display: block;
+                 font-family: $parrafos;
+                font-size: 1rem;   //16px
+                font-weight: 400;
+                color:$color-principal;
+                line-height: 1.5rem;
+            }
+        }
+
+        &__bg {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: brightness(0.85) saturate(90%);
+          z-index: 1;
+        }
+
+        &:hover &__bg {
+          filter: brightness(0.9) saturate(100%);
+          transform: scale(1.06);
+        }
+
+        &__content {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 0.7rem;
+          background: linear-gradient(transparent 40%, rgba(0, 0, 0, 0.6) 100%);
+          z-index: 2;
+        }
+
+        &__title {
+          font-weight: 700;
+          font-size: 1.35rem;
+          writing-mode: vertical-rl;
+          transform: rotate(180deg);
+        }
+
+        &__thumb,
+        &__desc,
+        &__btn {
+          display: none;
+        }
+
+        &__desc {
+          font-size: 1rem;
+          line-height: 1.4;
+          max-width: 16rem;
+          color: #ddd;
+        }
+
+        &__btn {
+          padding: 0.55rem 1.3rem;
+          border: none;
+          border-radius: 9999px;
+          background: var(--accent);
+          color: #fff;
+          font-size: 0.9rem;
+          font-weight: 600;
+          cursor: pointer;
+
+          &:hover {
+            background: #ff824f;
+          }
+        }
+      }
+    }
+  }
+
+  .workflow-dots {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 20px 0;
+
+    .dot {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.35);
+      cursor: pointer;
+      transition: 0.3s;
+
+      &.active {
+        background: var(--accent);
+        transform: scale(1.2);
+      }
+    }
+  }
+}

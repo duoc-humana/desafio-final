@@ -13556,4 +13556,185 @@ span {
 }
 .selector:hover {
   background-color: #0471B4;
+}
+
+:root {
+  --accent: #ff824f;
+  --gap: 1rem;
+  --closed: 4rem;
+  --open: 22rem;
+  --speed: 0.3s;
+}
+
+.workflow-section .workflow-head {
+  max-width: 1400px;
+  margin: auto;
+  padding: 70px 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+}
+.workflow-section .workflow-head h2, .workflow-section .workflow-head .h2 {
+  font: 400 1.5rem/1.2 Inter, sans-serif;
+}
+@media (min-width: 1024px) {
+  .workflow-section .workflow-head h2, .workflow-section .workflow-head .h2 {
+    font-size: 2.25rem;
+  }
+}
+.workflow-section .workflow-head .workflow-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+.workflow-section .workflow-head .workflow-controls .workflow-nav-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.workflow-section .workflow-head .workflow-controls .workflow-nav-btn:hover {
+  background: var(--accent);
+}
+.workflow-section .workflow-head .workflow-controls .workflow-nav-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.workflow-section .workflow-slider {
+  max-width: 1400px;
+  margin: auto;
+  overflow: hidden;
+}
+.workflow-section .workflow-slider .workflow-track {
+  display: flex;
+  gap: var(--gap);
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 40px;
+}
+.workflow-section .workflow-slider .workflow-track::-webkit-scrollbar {
+  display: none;
+}
+.workflow-section .workflow-slider .workflow-track .workflow-card {
+  position: relative;
+  flex: 0 0 var(--closed);
+  height: 26rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: flex-basis var(--speed), transform var(--speed);
+}
+.workflow-section .workflow-slider .workflow-track .workflow-card[active] {
+  flex-basis: var(--open);
+  transform: translateY(-6px);
+  box-shadow: 0 1px 11px #0471B4;
+  border-radius: 22px;
+}
+.workflow-section .workflow-slider .workflow-track .workflow-card[active] .workflow-card__bg {
+  position: static;
+  width: 100%;
+  height: auto;
+  filter: brightness(0.9) saturate(100%);
+  border-radius: 1rem 1rem 0 0;
+}
+.workflow-section .workflow-slider .workflow-track .workflow-card[active] .workflow-card__content {
+  position: relative;
+  background: #ffffff;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem 1.2rem;
+  gap: 0.7rem;
+  border-radius: 0 0 1rem 1rem;
+}
+.workflow-section .workflow-slider .workflow-track .workflow-card[active] .workflow-card__title {
+  writing-mode: horizontal-tb;
+  transform: none;
+  font-size: 1.6rem;
+}
+.workflow-section .workflow-slider .workflow-track .workflow-card[active] .workflow-card__desc {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #26364D;
+  line-height: 1.5rem;
+}
+.workflow-section .workflow-slider .workflow-track .workflow-card__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(0.85) saturate(90%);
+  z-index: 1;
+}
+.workflow-section .workflow-slider .workflow-track .workflow-card:hover .workflow-section .workflow-slider .workflow-track .workflow-card__bg {
+  filter: brightness(0.9) saturate(100%);
+  transform: scale(1.06);
+}
+.workflow-section .workflow-slider .workflow-track .workflow-card__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  background: linear-gradient(transparent 40%, rgba(0, 0, 0, 0.6) 100%);
+  z-index: 2;
+}
+.workflow-section .workflow-slider .workflow-track .workflow-card__title {
+  font-weight: 700;
+  font-size: 1.35rem;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+.workflow-section .workflow-slider .workflow-track .workflow-card__thumb, .workflow-section .workflow-slider .workflow-track .workflow-card__desc, .workflow-section .workflow-slider .workflow-track .workflow-card__btn {
+  display: none;
+}
+.workflow-section .workflow-slider .workflow-track .workflow-card__desc {
+  font-size: 1rem;
+  line-height: 1.4;
+  max-width: 16rem;
+  color: #ddd;
+}
+.workflow-section .workflow-slider .workflow-track .workflow-card__btn {
+  padding: 0.55rem 1.3rem;
+  border: none;
+  border-radius: 9999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.workflow-section .workflow-slider .workflow-track .workflow-card__btn:hover {
+  background: #ff824f;
+}
+.workflow-section .workflow-dots {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 20px 0;
+}
+.workflow-section .workflow-dots .dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.workflow-section .workflow-dots .dot.active {
+  background: var(--accent);
+  transform: scale(1.2);
 }/*# sourceMappingURL=mi-estilo.css.map */
