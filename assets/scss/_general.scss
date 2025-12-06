@@ -1463,9 +1463,8 @@ span {
     background-color: $color-fondo;
     color: $color-principal;
 
-    /* Imagen de la fundadora */
     img {
-      width: 258px;          // Tamaño más pequeño
+      width: 258px;     
       height: auto;
       border-radius: 22px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.15);
@@ -1474,12 +1473,11 @@ span {
       margin-right: auto;
   
       @media (max-width: 768px) {
-        width: 140px;        // Ajuste responsive
+        width: 140px;       
         margin-bottom: 15px;
       }
     }
   
-    /* Ajuste del layout */
     .row {
       align-items: center;
   
@@ -1490,35 +1488,71 @@ span {
     }
   }
   
-
-  .tabs-box {
+/* ==============================
+   SECCIÓN TABS
+============================== */
+.tabs-box {
     width: 100%;
-    max-width: 600px;
-    margin: 40px auto 0;
+    max-width: calc(100% - 240px);
+    margin: 40px 120px 0;
+    
+    @media (max-width: 768px) {
+        margin: 40px 20px 0;
+        max-width: calc(100% - 40px);
+    }
 }
 
 /* CONTENEDOR PRINCIPAL */
 .tab-content-box {
-    background-color: $azul-activo; // azul del contenedor
-    padding: 35px;
+    background-color: $azul-activo;
+    padding: 40px;
     border-radius: 16px;
     color: white;
     font-family: $parrafos;
-    min-height: 200px;
+    min-height: 220px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+    @media (max-width: 768px) {
+        min-height: 280px;
+        padding: 30px;
+    }
 }
 
 .tab-panel {
     display: none;
+    text-align: left;
+    width: 100%;
 
     &.active {
         display: block;
     }
 }
 
-/* RECTÁNGULOS PEQUEÑOS */
+.tab-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white;
+    
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
+}
+
+.tab-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    color: white;
+    
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
+}
+
+/* RECTÁNGULOS DE CONTROL */
 .tabs-selectors {
     display: flex;
     justify-content: space-between;
@@ -1528,20 +1562,41 @@ span {
 
 .selector {
     flex: 1;
-    height: 16px;
+    max-width: 380px;
+    height: 60px;
     background-color: $color-principal;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $parrafos;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
 
     &.active {
         background-color: $azul-activo;
+        font-weight: 600;
     }
 
     &:hover {
         background-color: $azul-activo;
     }
+    
+    @media (max-width: 768px) {
+        height: 60px;
+        font-size: 14px;
+        max-width: none;
+    }
 }
+
+  
+
+/* ==============================
+   SECCIÓN CARTAS QUIÉNES SOMOS
+============================== */
 
 //carrusel cartas de quienes somos 
 :root {

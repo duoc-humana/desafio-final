@@ -86,3 +86,20 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleUI(0);
   center(0);
 });
+
+// Funcionalidad de los tabs
+const selectors = document.querySelectorAll('.selector');
+const tabPanels = document.querySelectorAll('.tab-panel');
+
+selectors.forEach(selector => {
+    selector.addEventListener('click', function() {
+        selectors.forEach(s => s.classList.remove('active'));
+        
+        tabPanels.forEach(panel => panel.classList.remove('active'));
+        
+        this.classList.add('active');
+
+        const tabId = this.getAttribute('data-tab');
+        document.getElementById(tabId).classList.add('active');
+    });
+});
