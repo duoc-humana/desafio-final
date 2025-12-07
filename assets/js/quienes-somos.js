@@ -103,3 +103,25 @@ selectors.forEach(selector => {
         document.getElementById(tabId).classList.add('active');
     });
 });
+
+var swiper = new Swiper(".certificados-quienesSomos", {
+  slidesPerView: 1,
+  spaceBetween: 0, // o un valor pequeño
+  centeredSlides: false, // ← cambia esto
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+  },
+  breakpoints: {
+    320: { slidesPerView: 1, spaceBetween: 10 },
+    480: { slidesPerView: 1, spaceBetween: 15 },
+    640: { slidesPerView: 1, spaceBetween: 20 },
+    768: { slidesPerView: 1, spaceBetween: 30 },
+    1024: { slidesPerView: 1, spaceBetween: 40 },
+    1280: { slidesPerView: 1, spaceBetween: 50 }
+  }
+});

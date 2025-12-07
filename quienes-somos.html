@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/scss/mi-estilo.css">
 </head>
 
@@ -98,68 +99,93 @@
         </div>
     </div>
     
- <section class="workflow-section container">
-  <div class="workflow-head">
+ <section class="workflow-section container mt-5">
     <h2>Proceso de confección</h2>
-  </div>
-
   <div class="workflow-slider">
     <div class="workflow-track" id="workflow-track">
 
-      <article class="workflow-card" active>
-        <img class="workflow-card__bg" src="assets/img/revestimiento-boton.jpeg" alt="">
-        <div class="workflow-card__content">
-            <h3 class="workflow-card__title">Recepción y Clasificación</h3>
-            <p class="workflow-card__desc">Recepción del textil, pesaje, registro de origen y separación por tipo de fibra para asegurar calidad del material.</p>
-        </div>
-      </article>
+    <article class="workflow-card" active>
+    <img class="workflow-card__bg" src="assets/img/revestimiento-boton.jpeg" alt="">
+    <div class="workflow-card__content">
+        <span class="workflow-card__number">01</span>
+        <h3 class="workflow-card__title">Recepción y Clasificación</h3>
+        <p class="workflow-card__desc">Recepción del textil, pesaje, registro de origen y separación por tipo de fibra para asegurar calidad del material.</p>
+    </div>
+    </article>
 
-      <article class="workflow-card">
-        <img class="workflow-card__bg" src="assets/img/revestimiento-boton.jpeg" alt="">
-        <div class="workflow-card__content">
-            <h3 class="workflow-card__title">Preparación del Material</h3>
-            <p class="workflow-card__desc">Desarme, corte y acondicionamiento del textil para eliminar cierres, broches o elementos no reciclables.</p>  
-        </div>
-      </article>
+    <article class="workflow-card">
+    <img class="workflow-card__bg" src="assets/img/revestimiento-boton.jpeg" alt="">
+    <div class="workflow-card__content">
+        <span class="workflow-card__number">02</span>
+        <h3 class="workflow-card__title">Preparación del Material</h3>
+        <p class="workflow-card__desc">Desarme, corte y acondicionamiento del textil para eliminar cierres, broches o elementos no reciclables.</p>  
+    </div>
+    </article>
 
-      <article class="workflow-card">
-        <img class="workflow-card__bg" src="assets/img/revestimiento-boton.jpeg" alt="">
-        <div class="workflow-card__content">
-            <h3 class="workflow-card__title">Desfibrado y Mezcla</h3>
-            <p class="workflow-card__desc">Reducción mecánica de la prenda a fibras y mezcla con aglomerante creados y patentados por nosotros, para estabilizar la estructura.</p>
-        </div>
-      </article>
+    <article class="workflow-card">
+    <img class="workflow-card__bg" src="assets/img/revestimiento-boton.jpeg" alt="">
+    <div class="workflow-card__content">
+        <span class="workflow-card__number">03</span>
+        <h3 class="workflow-card__title">Desfibrado y Mezcla</h3>
+        <p class="workflow-card__desc">Reducción mecánica de la prenda a fibras y mezcla con aglomerante creados y patentados por nosotros, para estabilizar la estructura.</p>
+    </div>
+    </article>
 
-      <article class="workflow-card">
-        <img class="workflow-card__bg" src="assets/img/revestimiento-boton.jpeg" alt="">
-        <div class="workflow-card__content">
-            <h3 class="workflow-card__title">Moldeado y Compactación</h3>
-            <p class="workflow-card__desc">Ingreso del material a moldes específicos y compactación controlada para dar forma y resistencia.</p>
-        </div>
-      </article>
-      <article class="workflow-card">
-        <img class="workflow-card__bg" src="assets/img/revestimiento-boton.jpeg" alt="">
-        <div class="workflow-card__content">
-            <h3 class="workflow-card__title">Curado y Acabado</h3>
-            <p class="workflow-card__desc">Secado, estabilización del material y revisión de calidad. Aplicación de terminaciones si corresponde.</p>
-        </div>
-      </article>
+    <article class="workflow-card">
+    <img class="workflow-card__bg" src="assets/img/revestimiento-boton.jpeg" alt="">
+    <div class="workflow-card__content">
+        <span class="workflow-card__number">04</span>
+        <h3 class="workflow-card__title">Moldeado y Compactación</h3>
+        <p class="workflow-card__desc">Ingreso del material a moldes específicos y compactación controlada para dar forma y resistencia.</p>
+    </div>
+    </article>
 
-     
-       <article class="workflow-card">
-        <img class="workflow-card__bg" src="assets/img/revestimiento-boton.jpeg" alt="">
-        <div class="workflow-card__content">
-            <h3 class="workflow-card__title">Etiquetado y Certificación</h3>
-            <p class="workflow-card__desc">Incorporación de etiquetas personalizadas y emisión del certificado ambiental asociado a esa producción.</p>
-        </div>
-      </article>
+    <article class="workflow-card">
+    <img class="workflow-card__bg" src="assets/img/revestimiento-boton.jpeg" alt="">
+    <div class="workflow-card__content">
+        <span class="workflow-card__number">05</span>
+        <h3 class="workflow-card__title">Curado y Acabado</h3>
+        <p class="workflow-card__desc">Secado, estabilización del material y revisión de calidad. Aplicación de terminaciones si corresponde.</p>
+    </div>
+    </article>
+
+    <article class="workflow-card">
+    <img class="workflow-card__bg" src="assets/img/revestimiento-boton.jpeg" alt="">
+    <div class="workflow-card__content">
+        <span class="workflow-card__number">06</span>
+        <h3 class="workflow-card__title">Etiquetado y Certificación</h3>
+        <p class="workflow-card__desc">Incorporación de etiquetas personalizadas y emisión del certificado ambiental asociado a esa producción.</p>
+    </div>
+    </article>
 
     </div>
   </div>
 
   <div class="workflow-dots" id="workflow-dots"></div>
 </section>
+<section class="container">
+    <h2>Certificados de Recicla2</h2>
+    <div class="swiper certificados-quienesSomos">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" >
+                <div class="texto-certificados">
+                    <p class="order-md-2 order-1">Nuestra operación cuenta con la Certificación como Recicladora Base, otorgada por el Estado. Esto garantiza que tu empresa cumple con la normativa ambiental de manera confiable. Tu certificado de reciclaje es un documento oficial, asegurando trazabilidad total y generando confianza en tus reportes de sostenibilidad.</p>
+                </div>
+                <img  class="img-logo-certificado order-md-1 order-1" src="assets/img/ley-rep.png">
+            </div>
+            <div class="swiper-slide" >
+                 <div class="texto-certificados">
+                    <p>Nuestra operación cuenta con la Certificación como Recicladora Base, otorgada por el Estado. Esto garantiza que tu empresa cumple con la normativa ambiental de manera confiable. Tu certificado de reciclaje es un documento oficial, asegurando trazabilidad total y generando confianza en tus reportes de sostenibilidad.</p>
+                </div>
+                <img  class="img-logo-certificado" src="assets/img/ley-rep.png">
+            </div>
+        </div>
+         <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
 
+</section>
 
 
 </main>
@@ -212,6 +238,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
     </script>
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/quienes-somos.js"></script>
 </body>
 
