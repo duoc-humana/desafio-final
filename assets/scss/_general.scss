@@ -1602,8 +1602,8 @@ span {
 :root {
   --accent: #ff824f;
   --gap: 1rem;
-  --closed: 4rem;
-  --open: 22rem;
+  --closed: 7rem;
+  --open: 25.938rem;
   --speed: 0.3s;
 }
 
@@ -1676,17 +1676,26 @@ span {
       .workflow-card {
         position: relative;
         flex: 0 0 var(--closed);
-        height: 26rem;
+        height: 425px;
         border-radius: 1rem;
         overflow: hidden;
         cursor: pointer;
         transition: flex-basis var(--speed), transform var(--speed);
+
+         &:not([active])::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(38, 54, 77, 0.59); // tu filtro
+            z-index: 1;
+         }
 
         &[active] {
           flex-basis: var(--open);
             transform: translateY(-6px);
             box-shadow: 0 1px 11px #0471B4;
             border-radius: 22px;
+            height: 460px;
 
             .workflow-card__bg {
                 position: static;
@@ -1709,6 +1718,7 @@ span {
 
             .workflow-card__title {
                 writing-mode: horizontal-tb;
+                padding: 5px;
                 transform: none;
                 font-size: 1.6rem;
             }
@@ -1720,6 +1730,7 @@ span {
                 font-weight: 400;
                 color:$color-principal;
                 line-height: 1.5rem;
+                max-width: 50rem !important;
             }
         }
 
