@@ -8,34 +8,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const isMobile = () => matchMedia("(max-width:767px)").matches;
 
-  // Crear dots dinámicamente
-  cards.forEach((_, i) => {
-    const dot = document.createElement("span");
-    dot.className = "dot";
-    dot.onclick = () => activate(i, true);
-    dotsBox.appendChild(dot);
-  });
+  // Crear dots dinámicamente (solo escritorio)
+  if (!isMobile()) {
+    cards.forEach((_, i) => {
+      const dot = document.createElement("span");
+      dot.className = "dot";
+      dot.onclick = () => activate(i, true);
+      dotsBox.appendChild(dot);
+    });
+  }
   const dots = Array.from(dotsBox.children);
 
   let current = 0;
 
   function center(i) {
+    if (isMobile()) return; // en móvil no centramos nada
     const card = cards[i];
-    const axis = isMobile() ? "top" : "left";
-    const size = isMobile() ? "clientHeight" : "clientWidth";
-    const start = isMobile() ? card.offsetTop : card.offsetLeft;
+    const start = card.offsetLeft;
     wrap.scrollTo({
-      [axis]: start - (wrap[size] / 2 - card[size] / 2),
+      left: start - (wrap.clientWidth / 2 - card.clientWidth / 2),
       behavior: "smooth"
     });
   }
 
   function toggleUI(i) {
-    cards.forEach((c, k) => c.toggleAttribute("active", k === i));
-    dots.forEach((d, k) => d.classList.toggle("active", k === i));
-    prev.disabled = i === 0;
-    next.disabled = i === cards.length - 1;
-  }
+  cards.forEach((c, k) => c.toggleAttribute("active", k === i));
+  dots.forEach((d, k) => d.classList.toggle("active", k === i));
+
+  if (prev) prev.disabled = i === 0;
+  if (next) next.disabled = i === cards.length - 1;
+}
 
   function activate(i, scroll) {
     if (i === current) return;
@@ -48,36 +50,42 @@ document.addEventListener("DOMContentLoaded", () => {
     activate(Math.min(Math.max(current + step, 0), cards.length - 1), true);
   }
 
+  // Navegación con teclado (solo escritorio)
+  if (!isMobile()) {
+    addEventListener("keydown", (e) => {
+      if (["ArrowRight"].includes(e.key)) go(1);
+      if (["ArrowLeft"].includes(e.key)) go(-1);
+    }, { passive: true });
+  }
 
-
-  addEventListener("keydown", (e) => {
-    if (["ArrowRight", "ArrowDown"].includes(e.key)) go(1);
-    if (["ArrowLeft", "ArrowUp"].includes(e.key)) go(-1);
-  }, { passive: true });
-
+  // Activar tarjeta con hover/click
   cards.forEach((card, i) => {
     card.addEventListener("mouseenter", () => {
-      if (matchMedia("(hover:hover)").matches) activate(i, true);
+      if (!isMobile() && matchMedia("(hover:hover)").matches) activate(i, true);
     });
     card.addEventListener("click", () => activate(i, true));
   });
 
-  let sx = 0, sy = 0;
-  track.addEventListener("touchstart", (e) => {
-    sx = e.touches[0].clientX;
-    sy = e.touches[0].clientY;
-  }, { passive: true });
+  // Swipe (solo escritorio horizontal)
+  if (!isMobile()) {
+    let sx = 0;
+    track.addEventListener("touchstart", (e) => {
+      sx = e.touches[0].clientX;
+    }, { passive: true });
 
-  track.addEventListener("touchend", (e) => {
-    const dx = e.changedTouches[0].clientX - sx;
-    const dy = e.changedTouches[0].clientY - sy;
-    if (isMobile() ? Math.abs(dy) > 60 : Math.abs(dx) > 60) {
-      go((isMobile() ? dy : dx) > 0 ? -1 : 1);
-    }
-  }, { passive: true });
+    track.addEventListener("touchend", (e) => {
+      const dx = e.changedTouches[0].clientX - sx;
+      if (Math.abs(dx) > 60) {
+        go(dx > 0 ? -1 : 1);
+      }
+    }, { passive: true });
+  }
 
-  if (window.matchMedia("(max-width:767px)").matches) {
+  // Ocultar controles en móvil
+  if (isMobile()) {
     dotsBox.hidden = true;
+    if (prev) prev.hidden = true;
+    if (next) next.hidden = true;
   }
 
   addEventListener("resize", () => center(current), { passive: true });
@@ -86,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleUI(0);
   center(0);
 });
+
 
 // Funcionalidad de los tabs
 const selectors = document.querySelectorAll('.selector');
