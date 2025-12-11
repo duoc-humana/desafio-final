@@ -13997,4 +13997,310 @@ span {
   .certificados-quienesSomos {
     padding: 0 30px;
   }
+}
+
+/* Servicios de gestion */
+.seccion-residuos {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.seccion-residuos .titulo-seccion {
+  font-family: "Roboto Serif", serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #26364D;
+  line-height: 3rem;
+}
+.seccion-residuos .parrafo-seccion {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #26364D;
+  max-width: 100%;
+  line-height: 1.5rem;
+}
+.seccion-residuos .contenedor-img {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.seccion-residuos .imagen-residuos {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .seccion-residuos {
+    text-align: center;
+  }
+  .seccion-residuos .titulo-seccion {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+  .seccion-residuos .parrafo-seccion {
+    margin: 0 auto;
+  }
+  .seccion-residuos .contenedor-img {
+    margin-top: 30px;
+  }
+}
+.imgprimergest {
+  margin-top: 150px;
+}
+
+.lista-servicios {
+  list-style: none;
+  padding-left: 0;
+}
+.lista-servicios li {
+  margin-bottom: 67px;
+  position: relative;
+  padding-left: 20px;
+}
+.lista-servicios li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #0471B4;
+  font-weight: bold;
+}
+
+.btn-contactar {
+  border: 2px solid #0471B4;
+  color: #0471B4;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  transition: 0.3s;
+  width: 40%;
+}
+.btn-contactar:hover {
+  background: #0471B4;
+  color: white;
+}
+
+.link-ver-productos {
+  color: #26364D;
+  font-weight: 600;
+  border-bottom: 2px solid #26364D;
+  padding-bottom: 3px;
+  text-decoration: none;
+}
+.link-ver-productos:hover {
+  color: #0471B4;
+  border-bottom-color: #0471B4;
+}
+
+/* Contenedor */
+.carrusel-empresas {
+  padding: 48px 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Titulos */
+.section-title {
+  font-family: var(--titulos);
+  font-size: 2rem;
+  color: var(--color-principal);
+  margin-bottom: 8px;
+}
+
+.section-sub {
+  font-family: var(--parrafos);
+  color: var(--color-principal);
+  margin-bottom: 22px;
+  max-width: 900px;
+}
+
+/* SWIPER slide sizing — important: slidesPerView 'auto' + width control */
+.swiper-wrapper {
+  align-items: center;
+}
+
+/* Anchura de cada slide (ajustable). Esto permite que se vean varias tarjetas */
+.swiper-slide {
+  width: 560px;
+  /* ancho "base" de cada tarjeta en desktop */
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: transform 0.45s ease;
+  padding: 8px 0;
+}
+
+/* La tarjeta (imagen + info) */
+.card-slide {
+  display: flex;
+  width: 100%;
+  background: var(--color-fondo);
+  border-radius: 16px;
+  overflow: hidden;
+  align-items: stretch;
+  box-shadow: 0 8px 20px rgba(6, 20, 35, 0.08);
+  border: 2px solid transparent;
+  transition: all 0.45s ease;
+}
+
+/* Figura - imagen (lado izquierdo) */
+.card-media {
+  flex: 0 0 48%;
+  /* ocupa ~48% del ancho en estado activo */
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+/* Info (lado derecho) - inicialmente oculta en slides no activos */
+.card-info {
+  flex: 1 1 52%;
+  padding: 30px 32px;
+  box-sizing: border-box;
+  background: #fff;
+  transform: translateX(30px);
+  opacity: 0;
+  transition: all 0.55s cubic-bezier(0.2, 0.9, 0.2, 1);
+  width: 0;
+  overflow: hidden;
+}
+
+/* Estilos de texto dentro de la info */
+.card-info h3, .card-info .h3 {
+  font-family: var(--titulos);
+  font-size: 1.5rem;
+  color: var(--color-principal);
+  margin: 0 0 12px;
+}
+
+.card-info p {
+  font-family: var(--parrafos);
+  color: var(--color-principal);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Slides no activos — solo mostrar imagen reducida */
+.swiper-slide:not(.is-active) .card-slide {
+  transform: scale(0.88);
+  opacity: 0.95;
+  box-shadow: 0 6px 16px rgba(6, 20, 35, 0.06);
+  border-radius: 14px;
+}
+
+/* En slides no activos, esconder la info (colapsada) y hacer imagen cuadrada */
+.swiper-slide:not(.is-active) .card-info {
+  opacity: 0;
+  transform: translateX(10px);
+  width: 0;
+  padding: 0;
+}
+
+.swiper-slide:not(.is-active) .card-media {
+  flex: 0 0 100%;
+  height: 220px;
+  border-radius: 12px;
+}
+
+/* Slide activo — desplegar info dentro de la misma tarjeta */
+.swiper-slide.is-active .card-slide {
+  transform: scale(1.02);
+  border: 2px solid var(--azul-activo);
+  box-shadow: 0 12px 34px rgba(6, 20, 35, 0.12);
+}
+
+.swiper-slide.is-active .card-media {
+  flex: 0 0 54%;
+  height: 280px;
+}
+
+.swiper-slide.is-active .card-info {
+  opacity: 1;
+  transform: translateX(0);
+  width: auto;
+  /* recupera su espacio */
+  padding: 28px 36px;
+}
+
+/* Paginación estilo puntos */
+.swiper-pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #E6F2FB;
+  opacity: 1;
+  margin: 0 6px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--azul-activo);
+  box-shadow: 0 2px 6px rgba(4, 113, 180, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .swiper-slide {
+    width: 460px;
+  }
+  .card-media {
+    height: 220px;
+  }
+  .swiper-slide:not(.is-active) .card-media {
+    height: 180px;
+  }
+}
+@media (max-width: 767px) {
+  .swiper-slide {
+    width: 92%;
+  }
+  /* slider muestra tarjetas casi full-width en móvil */
+  .card-slide {
+    flex-direction: column;
+  }
+  .card-media {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+  }
+  /* mostrar info debajo en móvil */
+  .card-info {
+    width: 100%;
+    opacity: 1;
+    transform: translateY(8px);
+    padding: 18px;
+    margin-top: 12px;
+  }
+  .swiper-slide:not(.is-active) .card-info {
+    /* en móvil mostrar info en todas las slides por UX */
+    opacity: 1;
+    transform: translateY(8px);
+    width: 100%;
+    padding: 16px;
+  }
+}
+.imgeconomia {
+  width: 70%;
+}
+
+.botonoesinfos {
+  margin-top: 6.5rem;
 }/*# sourceMappingURL=mi-estilo.css.map */

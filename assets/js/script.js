@@ -26,50 +26,37 @@ document.querySelectorAll(".accordion-header").forEach(header => {
 });
 
 
-//carrusel cartas de quienes somos 
-  let currentIndex = 0;
-        const track = document.getElementById('carouselTrack');
-        const cards = document.querySelectorAll('.tarjeta-proceso');
-        const totalCards = cards.length;
-        const dotsContainer = document.getElementById('dotsContainer');
+document.addEventListener("DOMContentLoaded", function () {
 
-        // Crear dots
-        for (let i = 0; i < totalCards; i++) {
-            const dot = document.createElement('div');
-            dot.className = 'dot';
-            if (i === 0) dot.classList.add('active');
-            dot.onclick = () => goToSlide(i);
-            dotsContainer.appendChild(dot);
+    const swiper = new Swiper('.empresasSwiper', {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 28,
+        loop: true,
+        speed: 700,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        on: {
+            init: function () {
+                updateActiveClass(this);
+            },
+            slideChangeTransitionEnd: function () {
+                updateActiveClass(this);
+            }
         }
+    });
 
-        function updateCarousel() {
-            const cardWidth = cards[0].offsetWidth + 20; // card width + gap
-            track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-            
-            // Update dots
-            const dots = document.querySelectorAll('.dot');
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentIndex);
-            });
+    function updateActiveClass(swiperInstance) {
+        document.querySelectorAll('.swiper-slide').forEach(slide => {
+            slide.classList.remove('is-active');
+        });
+
+        const activeSlide = swiperInstance.slides[swiperInstance.activeIndex];
+        if (activeSlide) {
+            activeSlide.classList.add('is-active');
         }
+    }
 
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % totalCards;
-            updateCarousel();
-        }
-
-        function prevSlide() {
-            currentIndex = (currentIndex - 1 + totalCards) % totalCards;
-            updateCarousel();
-        }
-
-        function goToSlide(index) {
-            currentIndex = index;
-            updateCarousel();
-        }
-
-        // Auto-play (opcional)
-        setInterval(nextSlide, 5000);
-
-        // Responsive update
-        window.addEventListener('resize', updateCarousel);
+});
