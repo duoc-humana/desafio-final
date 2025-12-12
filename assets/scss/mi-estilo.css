@@ -13515,10 +13515,23 @@ span {
   max-width: calc(100% - 240px);
   margin: 40px 120px 0;
 }
+@media (max-width: 1024px) {
+  .tabs-box {
+    margin: 40px 40px 0;
+    max-width: calc(100% - 80px);
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: stretch;
+  }
+}
 @media (max-width: 768px) {
   .tabs-box {
     margin: 40px 20px 0;
     max-width: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
 }
 
@@ -13534,10 +13547,18 @@ span {
   align-items: flex-start;
   justify-content: flex-start;
 }
+@media (max-width: 1024px) {
+  .tab-content-box {
+    min-height: 300px;
+    padding: 35px;
+    flex: 1;
+  }
+}
 @media (max-width: 768px) {
   .tab-content-box {
-    min-height: 280px;
+    min-height: auto;
     padding: 30px;
+    order: 2;
   }
 }
 
@@ -13556,6 +13577,11 @@ span {
   margin-bottom: 15px;
   color: white;
 }
+@media (max-width: 1024px) {
+  .tab-title {
+    font-size: 22px;
+  }
+}
 @media (max-width: 768px) {
   .tab-title {
     font-size: 20px;
@@ -13567,6 +13593,11 @@ span {
   line-height: 1.6;
   margin: 0;
   color: white;
+}
+@media (max-width: 1024px) {
+  .tab-text {
+    font-size: 15px;
+  }
 }
 @media (max-width: 768px) {
   .tab-text {
@@ -13580,6 +13611,26 @@ span {
   justify-content: space-between;
   margin-top: 18px;
   gap: 12px;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .tabs-selectors {
+    margin-top: 0;
+    flex-direction: column;
+    min-width: 240px;
+    gap: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .tabs-selectors {
+    margin-top: 0;
+    flex-direction: column;
+    gap: 0;
+    order: 1;
+    height: auto;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
 }
 
 .selector {
@@ -13597,22 +13648,66 @@ span {
   font-size: 18px;
   font-weight: 500;
   color: white;
+  position: relative;
 }
 .selector.active {
   background-color: #0470B4;
-  font-weight: 600;
+  /* 🔥 Ajuste solicitado (MOBILE): selector activo más alto */
+}
+@media (max-width: 768px) {
+  .selector.active {
+    line-height: 1.4;
+    justify-content: space-between;
+  }
+  .selector.active::after {
+    content: "▼";
+    font-size: 18px;
+    margin-left: 20px;
+    flex-shrink: 0;
+  }
 }
 .selector:hover {
   background-color: #0470B4;
 }
+@media (max-width: 1024px) {
+  .selector {
+    max-width: none;
+    height: 80px;
+    font-size: 16px;
+    padding: 0 15px;
+    text-align: center;
+  }
+}
 @media (max-width: 768px) {
   .selector {
-    height: 60px;
-    font-size: 14px;
+    height: 90px;
+    font-size: 18px;
     max-width: none;
+    padding: 20px 30px;
+    line-height: 1.4;
+  }
+  .selector:not(.active) {
+    display: none;
   }
 }
 
+/* Cuando se hace click en móvil, mostrar todos los selectores */
+@media (max-width: 768px) {
+  .tabs-selectors.open {
+    gap: 16px;
+    height: auto;
+  }
+  .tabs-selectors.open .selector {
+    display: flex;
+  }
+  .tabs-selectors.open .selector:not(.active) {
+    display: flex;
+    height: 100px; /* altura más grande al abrir */
+  }
+  .tabs-selectors.open .selector.active::after {
+    content: "▲";
+  }
+}
 /* ==============================
    SECCIÓN CARTAS QUIÉNES SOMOS
 ============================== */
