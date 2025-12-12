@@ -13846,6 +13846,7 @@ span {
   opacity: 1;
 }
 .contenedor-certificados .texto-certificados p {
+  text-align: left;
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -14040,7 +14041,7 @@ span {
 }
 
 .award-year {
-  font-size: 2rem;
+  font-size: 1em;
   font-weight: bold;
   color: #0470B4;
   line-height: 1;
@@ -14048,8 +14049,7 @@ span {
 }
 
 .award-categoria {
-  font-size: 0.9rem;
-  text-transform: uppercase;
+  font-size: 1rem;
   color: #0470B4;
   letter-spacing: 2px;
   margin-top: 5px;
@@ -14065,12 +14065,13 @@ span {
 }
 
 .award-title {
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: #26364D;
   line-height: 1.5;
   margin-top: auto;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  text-align: left;
 }
 
 @media (max-width: 768px) {
@@ -14081,7 +14082,6 @@ span {
     min-height: 220px;
   }
 }
-
 /* Servicios de gestion */
 .seccion-residuos {
   padding-top: 60px;
@@ -14149,13 +14149,13 @@ span {
   position: absolute;
   left: 0;
   top: 0;
-  color: #0471B4;
+  color: #0470B4;
   font-weight: bold;
 }
 
 .btn-contactar {
-  border: 2px solid #0471B4;
-  color: #0471B4;
+  border: 2px solid #0470B4;
+  color: #0470B4;
   padding: 10px 25px;
   border-radius: 30px;
   font-size: 1.125rem;
@@ -14164,7 +14164,7 @@ span {
   width: 40%;
 }
 .btn-contactar:hover {
-  background: #0471B4;
+  background: #0470B4;
   color: white;
 }
 
@@ -14176,8 +14176,8 @@ span {
   text-decoration: none;
 }
 .link-ver-productos:hover {
-  color: #0471B4;
-  border-bottom-color: #0471B4;
+  color: #0470B4;
+  border-bottom-color: #0470B4;
 }
 
 /* Contenedor */
