@@ -12348,7 +12348,7 @@ a {
 }
 
 .color-celeste {
-  color: #0471B4;
+  color: #0470B4;
 }
 
 /* +++++ BANNER PRINCIPAL +++++ */
@@ -12389,24 +12389,24 @@ img {
 }
 
 .btn1:hover {
-  background-color: #0471B4;
+  background-color: #0470B4;
   color: #ffffff;
   border: 0.75rem solid #ffffff;
 }
 
 .btn2 {
-  color: #0471B4;
+  color: #0470B4;
   font-family: "Montserrat", sans-serif;
   font-size: 1.125rem;
   border-radius: 22px;
   padding: 1.438rem 3.5rem;
-  border: 3px solid #0471B4;
+  border: 3px solid #0470B4;
   text-decoration: none;
 }
 
 .btn2:hover {
   color: #ffffff;
-  background-color: #0471B4;
+  background-color: #0470B4;
   font-family: "Montserrat", sans-serif;
   font-size: 1.125rem;
   border-radius: 22px;
@@ -12521,7 +12521,7 @@ img {
 }
 
 .link:hover {
-  color: #0471B4;
+  color: #0470B4;
 }
 
 .bajada-titulo-banner {
@@ -12533,7 +12533,7 @@ img {
 }
 
 .txt-esp1 {
-  color: #0471B4;
+  color: #0470B4;
   font-family: "Montserrat", sans-serif;
   line-height: 2.375rem;
   font-size: 1.875rem;
@@ -12879,7 +12879,7 @@ span {
   cursor: pointer;
 }
 .carrito-volver:hover {
-  color: #0471B4;
+  color: #0470B4;
 }
 @media (max-width: 768px) {
   .carrito-volver {
@@ -13016,9 +13016,9 @@ span {
   transition: all 0.3s;
 }
 .carrito-item-cantidad button:hover {
-  background-color: #0471B4;
+  background-color: #0470B4;
   color: #ffffff;
-  border-color: #0471B4;
+  border-color: #0470B4;
 }
 @media (max-width: 768px) {
   .carrito-item-cantidad button {
@@ -13210,12 +13210,12 @@ span {
   border-bottom: 2px solid #E5E5E5;
 }
 .carrito-resumen-linea.envio {
-  color: #0471B4;
+  color: #0470B4;
   cursor: pointer;
   text-decoration: underline;
 }
 .carrito-resumen-linea.envio:hover {
-  color: rgb(2.8913043478, 81.6793478261, 130.1086956522);
+  color: rgb(2.8913043478, 80.9565217391, 130.1086956522);
 }
 @media (max-width: 768px) {
   .carrito-resumen-linea {
@@ -13276,12 +13276,12 @@ span {
 }
 
 .carrito-btn-comprar {
-  color: #0471B4;
+  color: #0470B4;
   font-family: "Montserrat", sans-serif;
   font-size: 1.125rem;
   border-radius: 22px;
   padding: 1.438rem 3.5rem;
-  border: 3px solid #0471B4;
+  border: 3px solid #0470B4;
   text-decoration: none;
   background-color: #ffffff;
   width: 100%;
@@ -13290,7 +13290,7 @@ span {
 }
 .carrito-btn-comprar:hover {
   color: #ffffff;
-  background-color: #0471B4;
+  background-color: #0470B4;
   font-family: "Montserrat", sans-serif;
   font-size: 1.125rem;
   border-radius: 22px;
@@ -13524,7 +13524,7 @@ span {
 
 /* CONTENEDOR PRINCIPAL */
 .tab-content-box {
-  background-color: #0471B4;
+  background-color: #0470B4;
   padding: 40px;
   border-radius: 16px;
   color: white;
@@ -13599,11 +13599,11 @@ span {
   color: white;
 }
 .selector.active {
-  background-color: #0471B4;
+  background-color: #0470B4;
   font-weight: 600;
 }
 .selector:hover {
-  background-color: #0471B4;
+  background-color: #0470B4;
 }
 @media (max-width: 768px) {
   .selector {
@@ -13823,145 +13823,126 @@ span {
     padding: 0.7rem;
   }
 }
-.swiper {
+.certificados-quienesSomos {
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  padding: 0px 20px;
 }
 
-.swiper-slide {
+.contenedor-certificados {
   font-size: 20px;
   font-family: "Montserrat", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  padding: 0px 100px;
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
   flex-shrink: 0;
 }
-.swiper-slide .texto-certificados {
-  width: 100%;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.swiper-slide .texto-certificados p {
-  font-size: 20px;
-  line-height: 1.6;
-}
-.swiper-slide.swiper-slide-active .texto-certificados {
+.contenedor-certificados .texto-certificados {
+  width: 50%;
   opacity: 1;
 }
-.swiper-slide .img-logo-certificado {
+.contenedor-certificados .texto-certificados p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.contenedor-certificados .img-logo-certificado {
   display: block;
-  width: 360px;
-  height: 357px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 250px;
+  height: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
   box-shadow: none;
 }
 @media (max-width: 767px) {
-  .swiper-slide {
+  .contenedor-certificados {
     flex-direction: column;
   }
-  .swiper-slide .texto-certificados {
+  .contenedor-certificados .texto-certificados {
     order: 2;
+    width: 100%;
   }
-  .swiper-slide .img-logo-certificado {
+  .contenedor-certificados .img-logo-certificado {
     order: 1;
     width: 250px;
     height: 247px;
   }
-  .swiper-slide .texto-certificados p {
+  .contenedor-certificados .texto-certificados p {
     font-size: 16px;
   }
 }
 @media (max-width: 639px) {
-  .swiper-slide .img-logo-certificado {
+  .contenedor-certificados {
+    padding: 20px 40px;
+  }
+  .contenedor-certificados .img-logo-certificado {
     width: 200px;
     height: 197px;
   }
-  .swiper-slide .texto-certificados p {
+  .contenedor-certificados .texto-certificados p {
     font-size: 14px;
   }
 }
 @media (max-width: 479px) {
-  .swiper-slide {
-    padding: 15px;
+  .contenedor-certificados {
     gap: 15px;
   }
-  .swiper-slide .img-logo-certificado {
+  .contenedor-certificados .img-logo-certificado {
     width: 150px;
     height: 147px;
   }
 }
 @media (min-width: 768px) {
-  .swiper-slide {
+  .contenedor-certificados {
     flex-direction: row;
     gap: 40px;
   }
-  .swiper-slide .texto-certificados {
+  .contenedor-certificados .texto-certificados {
     order: 1;
     flex: 1;
     text-align: left;
   }
-  .swiper-slide .img-logo-certificado {
-    order: 2;
-    width: 300px;
-    height: 297px;
-  }
-}
-@media (min-width: 1024px) {
-  .swiper-slide {
-    gap: 50px;
-  }
-  .swiper-slide .img-logo-certificado {
-    width: 360px;
-    height: 357px;
-  }
-  .swiper-slide .texto-certificados p {
-    font-size: 18px;
+  .contenedor-certificados .contenedor-certificados {
+    padding: 50px;
   }
 }
 
 .certificados-quienesSomos {
   position: relative;
-  padding: 0 80px;
 }
 .certificados-quienesSomos .swiper-button-next,
 .certificados-quienesSomos .swiper-button-prev {
   width: 50px;
   height: 50px;
-  background: white;
-  border-radius: 50%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 .certificados-quienesSomos .swiper-button-next:after,
 .certificados-quienesSomos .swiper-button-prev:after {
   font-size: 20px;
-  color: #333;
+  color: #0470B4;
 }
 .certificados-quienesSomos .swiper-button-next {
-  right: 0px;
+  right: 20px;
 }
 .certificados-quienesSomos .swiper-button-prev {
-  left: 0px;
+  left: 20px;
 }
 @media (max-width: 1023px) {
   .certificados-quienesSomos {
-    padding: 0 60px;
+    padding: 40px 70px;
   }
   .certificados-quienesSomos .swiper-button-next {
-    right: 10px;
+    right: 15px;
   }
   .certificados-quienesSomos .swiper-button-prev {
-    left: 10px;
+    left: 15px;
   }
 }
 @media (max-width: 767px) {
   .certificados-quienesSomos {
-    padding: 0 50px;
+    padding: 30px 60px;
   }
   .certificados-quienesSomos .swiper-button-next,
   .certificados-quienesSomos .swiper-button-prev {
@@ -13975,13 +13956,13 @@ span {
 }
 @media (max-width: 639px) {
   .certificados-quienesSomos {
-    padding: 0 40px;
+    padding: 20px 50px;
   }
   .certificados-quienesSomos .swiper-button-next {
-    right: 5px;
+    right: 10px;
   }
   .certificados-quienesSomos .swiper-button-prev {
-    left: 5px;
+    left: 10px;
   }
   .certificados-quienesSomos .swiper-button-next,
   .certificados-quienesSomos .swiper-button-prev {
@@ -13995,6 +13976,108 @@ span {
 }
 @media (max-width: 479px) {
   .certificados-quienesSomos {
-    padding: 0 30px;
+    padding: 20px 40px;
+  }
+}
+
+.slider-premios {
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.swiper-slide {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.award-card {
+  background: #E8F3FF;
+  border-radius: 22px;
+  padding: 30px 20px;
+  text-align: center;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 280px;
+  width: 100%;
+}
+.award-card.featured {
+  background: linear-gradient(135deg, #3b5166 0%, #2c3e50 100%);
+  color: #ffffff;
+  border-radius: 30px;
+}
+.award-card.featured .award-year {
+  color: #ffffff;
+  font-family: "Roboto Serif", serif;
+}
+.award-card.featured .award-categoria {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Roboto Serif", serif;
+}
+.award-card.featured .award-icon svg {
+  fill: #ffffff;
+}
+.award-card.featured .award-title {
+  color: #ffffff;
+}
+
+.award-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.award-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Roboto Serif", serif;
+}
+
+.award-year {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0470B4;
+  line-height: 1;
+  font-family: "Roboto Serif", serif;
+}
+
+.award-categoria {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #0470B4;
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+
+.award-icon {
+  flex-shrink: 0;
+}
+.award-icon svg {
+  width: 50px;
+  height: 50px;
+  fill: #0470B4;
+}
+
+.award-title {
+  font-size: 1rem;
+  color: #26364D;
+  line-height: 1.5;
+  margin-top: auto;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .awards-header h2, .awards-header .h2 {
+    font-size: 2rem;
+  }
+  .award-card {
+    min-height: 220px;
   }
 }/*# sourceMappingURL=mi-estilo.css.map */

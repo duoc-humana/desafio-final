@@ -4,20 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = Array.from(track.children);
   const prev = document.getElementById("workflow-prev");
   const next = document.getElementById("workflow-next");
-  const dotsBox = document.getElementById("workflow-dots");
+
 
   const isMobile = () => matchMedia("(max-width:767px)").matches;
 
-  // Crear dots dinámicamente (solo escritorio)
-  if (!isMobile()) {
-    cards.forEach((_, i) => {
-      const dot = document.createElement("span");
-      dot.className = "dot";
-      dot.onclick = () => activate(i, true);
-      dotsBox.appendChild(dot);
-    });
-  }
-  const dots = Array.from(dotsBox.children);
+
 
   let current = 0;
 
@@ -81,12 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { passive: true });
   }
 
-  // Ocultar controles en móvil
-  if (isMobile()) {
-    dotsBox.hidden = true;
-    if (prev) prev.hidden = true;
-    if (next) next.hidden = true;
-  }
 
   addEventListener("resize", () => center(current), { passive: true });
 
@@ -134,3 +119,29 @@ var swiper = new Swiper(".certificados-quienesSomos", {
     1280: { slidesPerView: 1, spaceBetween: 50 }
   }
 });
+
+//premios
+var premios = new Swiper('.slider-premios', {
+            loop: true,
+      spaceBetween: 50,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                },
+            },
+           
+        });
+
