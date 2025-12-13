@@ -145,3 +145,41 @@ var premios = new Swiper('.slider-premios', {
            
         });
 
+        document.addEventListener('DOMContentLoaded', function() {
+          const tabsSelectors = document.querySelector('.tabs-selectors');
+          const selectors = document.querySelectorAll('.selector');
+          
+          // Función para cambiar de tab
+          selectors.forEach(selector => {
+              selector.addEventListener('click', function() {
+                  const isMobile = window.innerWidth <= 768;
+                  
+                  if (isMobile && this.classList.contains('active')) {
+                      // Toggle dropdown en móvil
+                      tabsSelectors.classList.toggle('open');
+                  } else {
+                      // Cambiar tab
+                      selectors.forEach(s => s.classList.remove('active'));
+                      this.classList.add('active');
+                      
+                      const tabId = this.getAttribute('data-tab');
+                      document.querySelectorAll('.tab-panel').forEach(panel => {
+                          panel.classList.remove('active');
+                      });
+                      document.getElementById(tabId).classList.add('active');
+                      
+                      // Cerrar dropdown en móvil después de seleccionar
+                      if (isMobile) {
+                          tabsSelectors.classList.remove('open');
+                      }
+                  }
+              });
+          });
+          
+          // Cerrar dropdown al hacer click fuera
+          document.addEventListener('click', function(e) {
+              if (window.innerWidth <= 768 && !tabsSelectors.contains(e.target)) {
+                  tabsSelectors.classList.remove('open');
+              }
+          });
+      });
