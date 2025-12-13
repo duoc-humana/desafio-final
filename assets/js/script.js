@@ -26,42 +26,14 @@ document.querySelectorAll(".accordion-header").forEach(header => {
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
 
-    const swiper = new Swiper('.empresasSwiper', {
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        spaceBetween: 28,
-        loop: true,
-        speed: 700,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        on: {
-            init: function () {
-                updateActiveClass(this);
-            },
-            slideChangeTransitionEnd: function () {
-                updateActiveClass(this);
-            }
-        }
-    });
 
-    function updateActiveClass(swiperInstance) {
-        document.querySelectorAll('.swiper-slide').forEach(slide => {
-            slide.classList.remove('is-active');
-        });
 
-        const activeSlide = swiperInstance.slides[swiperInstance.activeIndex];
-        if (activeSlide) {
-            activeSlide.classList.add('is-active');
-        }
-    }
 
+document.querySelectorAll('.icono-circulo').forEach(icono => {
+  icono.addEventListener('click', () => {
+    icono.classList.toggle('activo');
+  });
 });
-
-
-
 
 

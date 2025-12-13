@@ -11,7 +11,9 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
     <link rel='stylesheet'
         href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css'>
-    <style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+ <!--    <style>
+        
         @charset "utf-8";
 
         /******* Fonts Import Start **********/
@@ -166,11 +168,118 @@
                 transform: translateY(calc(100% - 42px));
             }
         }
+    </style> -->
+    <style>
+        /* Ajustes generales */
+/* Ajustes generales */
+/* Ajustes generales */
+.swiper {
+  width: 100%;
+  padding: 60px 50px;
+}
+
+.swiper-slide {
+  margin: 0 15px 60px;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  align-items: flex-end;
+  background: #343434 center/cover no-repeat;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+/* Degradado */
+.swiper-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+}
+
+/* Descripción */
+.item-desc {
+  padding: 0 24px 12px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  transform: translateY(calc(100% - 54px));
+  transition: 0.4s ease-in-out;
+}
+
+.item-desc p {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: 0.4s ease-in-out 0.2s;
+}
+
+/* --- EFECTO EXPANDIR AL HOVER --- */
+.swiper-slide:hover {
+  width: 500px; /* 👈 se expande */
+  box-shadow: 12px 40px 40px rgba(0,0,0,0.25);
+}
+
+.swiper-slide:hover .item-desc {
+  transform: translateY(0);
+}
+
+.swiper-slide:hover .item-desc p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .swiper-slide {
+    width: 260px;
+    height: 360px;
+  }
+  .swiper-slide:hover {
+    width: 400px;
+  }
+  .item-desc {
+    transform: translateY(calc(100% - 46px));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .swiper-slide {
+    width: 240px;
+    height: 330px;
+  }
+  .swiper-slide:hover {
+    width: 360px;
+  }
+  .item-desc {
+    transform: translateY(calc(100% - 42px));
+  }
+}
+
+@media (max-width: 767px) {
+  .swiper-slide {
+    width: 200px;
+    height: 280px;
+    margin: 0 10px 40px;
+  }
+  .swiper-slide:hover {
+    width: 270px;
+    box-shadow: 6px 10px 10px rgba(0,0,0,0.25);
+  }
+  .item-desc {
+    padding: 0 14px 5px;
+    transform: translateY(calc(100% - 42px));
+  }
+}
+
+
     </style>
 </head>
 
 <body translate="no">
-    <section class="game-section">
+ <!--    <section class="game-section">
         <h2>Nuestro trabajo con empresas</h2>
         <p>Las empresas nos eligen por una solución integral: gestionamos su residuo textil con trazabilidad total y les
             entregamos un certificado oficial que valida su compromiso ambiental ante clientes, colaboradores y la
@@ -222,13 +331,85 @@
             </div>
         </div>
         </div>
-    </section>
+    </section> -->
+    <section class="game-section container">
+  <h2>Nuestro trabajo con empresas</h2>
+  <p>
+    Las empresas nos eligen por una solución integral: gestionamos su residuo textil con trazabilidad total y les
+    entregamos un certificado oficial que valida su compromiso ambiental ante clientes, colaboradores y la normativa vigente.
+  </p>
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide" style="background-image: url(confeccion-boton.jpeg);">
+        <div class="item-desc">
+          <h3>Gasvalpo</h3>
+          <p>Revalorización de prendas institucionales con trazabilidad y reportes de impacto.</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide" style="background-image: url(maceta-boton.jpg);">
+        <div class="item-desc">
+          <h3>The Witcher 3</h3>
+          <p>The Witcher 3 is a multiplayer online battle arena by Valve. The game is a sequel to Defense
+            of the Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide" style="background-image: url(img-home1.png);">
+        <div class="item-desc">
+          <h3>RDR 2</h3>
+          <p>RDR 2 is a multiplayer online battle arena by Valve. The game is a sequel to Defense of the
+            Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="swiper-slide" style="background-image: url(ley-rep.png);">
+        <div class="item-desc">
+          <h3>PUBG Mobile</h3>
+          <p>PUBG 2 is a multiplayer online battle arena by Valve. The game is a sequel to Defense of the
+            Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="swiper-slide" style="background-image: url(revestimiento-boton.jpeg);">
+        <div class="item-desc">
+          <h3>Fortnite</h3>
+          <p>Battle royale where 100 players fight to be the last person standing.</p>
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+      <div class="swiper-slide" style="background-image: url(contenedor.webp);">
+        <div class="item-desc">
+          <h3>Far Cry 5</h3>
+          <p>Far Cry 5 is a 2018 first-person shooter game developed by Ubisoft.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flechas y paginación -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
     <script id="rendered-js">
-        $(".custom-carousel").owlCarousel({
+      /*   $(".custom-carousel").owlCarousel({
             autoWidth: true,
-            loop: true
+            loop: true,
+            nav: true, // 👈 activa las flechas
+             navText: ["&#10094;", "&#10095;"] // símbolos ← →
         });
 
         $(document).ready(function () {
@@ -237,6 +418,34 @@
                 $(this).toggleClass("active");
             });
         });
+         */
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+             breakpoints: {
+                640: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                },
+                768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                },
+                1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                },
+            },
+            });
+
     </script>
 
 
