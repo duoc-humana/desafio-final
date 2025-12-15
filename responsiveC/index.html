@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <title>Expandable Animated Card Slider</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <div class="container py-5 contacto-wrapper">
+
+            <!-- Link Home -->
+            <div class="row mb-4">
+                <div class="col">
+                    <a class="links-sy" href="<?php echo home_url(); ?>">Ir al home</a>
+                </div>
+            </div>
+
+            <div class="row g-5">
+
+                <!-- Columna izquierda: Información -->
+                <div class="col-12 col-lg-5 order-2 order-lg-1">
+
+                    <div class="info-card text-center p-4 mb-4">
+                        <img class="icono-contacto mb-3" src="icono-ubicacion.png" alt="Icono ubicación">
+                        <p class="fw-semibold mb-0">Dirección</p>
+                    </div>
+
+                    <div class="info-card text-center p-4 mb-4">
+                        <img class="icono-contacto mb-3" src="icono-telefono.png" alt="Icono teléfono">
+                        <p class="fw-semibold mb-0">+56 9 00000000</p>
+                    </div>
+
+                    <div class="info-card text-center p-4 mb-4">
+                        <img class="icono-contacto mb-3" src="icono-mail.png" alt="Icono mail">
+                        <p class="fw-semibold mb-0">consuelo.miranda@gmail.com</p>
+                    </div>
+
+                </div>
+
+                <!-- Columna derecha: Formulario -->
+                <div class="col-12 col-lg-7 order-1 order-lg-2">
+
+                    <h1 class="mb-3">Formulario de contacto</h1>
+
+                    <p class="text-muted">
+                        No dudes en comunicarte con el equipo Recicla2, estaremos felices de resolver cualquier duda que
+                        tengas sobre nuestros productos, procesos y proyectos especiales.
+                    </p>
+
+                    <ul class="ps-4 text-muted">
+                        <li>Diferentes medios de pago</li>
+                        <li>Plazo de respuesta de 1 a 3 días hábiles</li>
+                    </ul>
+
+                    <form class="mt-4">
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Nombre y Apellido</label>
+                                <input class="form-control" type="text">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Teléfono</label>
+                                <input class="form-control" type="tel">
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label">Correo electrónico</label>
+                                <input class="form-control" type="email">
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label">Asunto</label>
+                                <input class="form-control" type="text">
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label">Escribe tu mensaje</label>
+                                <textarea class="form-control" rows="4"></textarea>
+                            </div>
+
+                            <div class="col-12 d-flex justify-content-end mb-5 mt-3">
+                                <button type="submit" class="boton-enviar-sy">Enviar</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
